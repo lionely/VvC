@@ -1,0 +1,1604 @@
+fileFormatVersion: 2
+guid: 94704a8e18e6b44f787f00d2546f64a5
+timeCreated: 1486928864
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: meatxveggies_0
+    21300002: meatxveggies_1
+    21300004: meatxveggies_2
+    21300006: meatxveggies_3
+    21300008: meatxveggies_4
+    21300010: meatxveggies_5
+    21300012: meatxveggies_6
+    21300014: meatxveggies_7
+    21300016: meatxveggies_8
+    21300018: meatxveggies_9
+    21300020: meatxveggies_10
+    21300022: meatxveggies_11
+    21300024: meatxveggies_12
+    21300026: meatxveggies_13
+    21300028: meatxveggies_14
+    21300030: meatxveggies_15
+    21300032: meatxveggies_16
+    21300034: meatxveggies_17
+    21300036: meatxveggies_18
+    21300038: meatxveggies_19
+    21300040: meatxveggies_20
+    21300042: meatxveggies_21
+    21300044: meatxveggies_22
+    21300046: meatxveggies_23
+    21300048: meatxveggies_24
+    21300050: meatxveggies_25
+    21300052: meatxveggies_26
+    21300054: meatxveggies_27
+    21300056: meatxveggies_28
+    21300058: meatxveggies_29
+    21300060: meatxveggies_30
+    21300062: meatxveggies_31
+    21300064: meatxveggies_32
+    21300066: meatxveggies_33
+    21300068: meatxveggies_34
+    21300070: meatxveggies_35
+    21300072: meatxveggies_36
+    21300074: meatxveggies_37
+    21300076: meatxveggies_38
+    21300078: meatxveggies_39
+    21300080: meatxveggies_40
+    21300082: meatxveggies_41
+    21300084: meatxveggies_42
+    21300086: meatxveggies_43
+    21300088: meatxveggies_44
+    21300090: meatxveggies_45
+    21300092: meatxveggies_46
+    21300094: meatxveggies_47
+    21300096: meatxveggies_48
+    21300098: meatxveggies_49
+    21300100: meatxveggies_50
+    21300102: meatxveggies_51
+    21300104: meatxveggies_52
+    21300106: meatxveggies_53
+    21300108: meatxveggies_54
+    21300110: meatxveggies_55
+    21300112: meatxveggies_56
+    21300114: meatxveggies_57
+    21300116: meatxveggies_58
+    21300118: meatxveggies_59
+    21300120: meatxveggies_60
+    21300122: meatxveggies_61
+    21300124: meatxveggies_62
+    21300126: meatxveggies_63
+    21300128: meatxveggies_64
+    21300130: meatxveggies_65
+    21300132: meatxveggies_66
+    21300134: meatxveggies_67
+    21300136: meatxveggies_68
+    21300138: meatxveggies_69
+    21300140: meatxveggies_70
+    21300142: meatxveggies_71
+    21300144: meatxveggies_72
+    21300146: meatxveggies_73
+    21300148: meatxveggies_74
+    21300150: meatxveggies_75
+    21300152: meatxveggies_76
+    21300154: meatxveggies_77
+    21300156: meatxveggies_78
+    21300158: meatxveggies_79
+    21300160: meatxveggies_80
+    21300162: meatxveggies_81
+    21300164: meatxveggies_82
+    21300166: meatxveggies_83
+    21300168: meatxveggies_84
+    21300170: meatxveggies_85
+    21300172: meatxveggies_86
+    21300174: meatxveggies_87
+    21300176: meatxveggies_88
+    21300178: meatxveggies_89
+    21300180: meatxveggies_90
+    21300182: meatxveggies_91
+    21300184: meatxveggies_92
+    21300186: meatxveggies_93
+    21300188: meatxveggies_94
+    21300190: meatxveggies_95
+    21300192: meatxveggies_96
+    21300194: meatxveggies_97
+    21300196: meatxveggies_98
+    21300198: meatxveggies_99
+    21300200: meatxveggies_100
+    21300202: meatxveggies_101
+    21300204: meatxveggies_102
+    21300206: meatxveggies_103
+    21300208: meatxveggies_104
+    21300210: meatxveggies_105
+    21300212: meatxveggies_106
+    21300214: meatxveggies_107
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: iPhone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: meatxveggies_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 269
+        width: 24
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_1
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 269
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_2
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 269
+        width: 18
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_3
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 269
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_4
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 268
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_5
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 270
+        width: 21
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_6
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 268
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_7
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 267
+        width: 21
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_8
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 267
+        width: 17
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_9
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 269
+        width: 24
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_10
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 247
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_11
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 246
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_12
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 246
+        width: 19
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_13
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 244
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_14
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 246
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_15
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 246
+        width: 19
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_16
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 245
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_17
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 245
+        width: 21
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_18
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 243
+        width: 23
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_19
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 244
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 222
+        width: 24
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_21
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 220
+        width: 8
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_22
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 221
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_23
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 219
+        width: 14
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_24
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 220
+        width: 8
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_25
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 221
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_26
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 219
+        width: 14
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_27
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 220
+        width: 9
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_28
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 222
+        width: 13
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_29
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 197
+        width: 20
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_30
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 197
+        width: 24
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_31
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 196
+        width: 18
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_32
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 195
+        width: 47
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_33
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 196
+        width: 20
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_34
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 196
+        width: 24
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_35
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 196
+        width: 23
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_36
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 204
+        width: 19
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_37
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 199
+        width: 20
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_38
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 196
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_39
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 195
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_40
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 175
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_41
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 175
+        width: 24
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_42
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 174
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_43
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 172
+        width: 22
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_44
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 172
+        width: 22
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_45
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 174
+        width: 23
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_46
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 175
+        width: 21
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_47
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 172
+        width: 24
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_48
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 172
+        width: 24
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_49
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 174
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_50
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 150
+        width: 20
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_51
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 151
+        width: 48
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_52
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 149
+        width: 22
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_53
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 149
+        width: 72
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_54
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 151
+        width: 24
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_55
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 148
+        width: 23
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_56
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 148
+        width: 19
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_57
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 124
+        width: 24
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_58
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 124
+        width: 23
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_59
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 125
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_60
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 125
+        width: 22
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_61
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 123
+        width: 72
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_62
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 126
+        width: 24
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_63
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 125
+        width: 24
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_64
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 126
+        width: 24
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_65
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 102
+        width: 21
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_66
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 102
+        width: 23
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_67
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 102
+        width: 19
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_68
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 101
+        width: 22
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_69
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 103
+        width: 22
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_70
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 99
+        width: 24
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_71
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 100
+        width: 24
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_72
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 102
+        width: 23
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_73
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 99
+        width: 24
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_74
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 101
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_75
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 76
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_76
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 76
+        width: 24
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_77
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 79
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_78
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 77
+        width: 24
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_79
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 78
+        width: 21
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_80
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 79
+        width: 21
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_81
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 79
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_82
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 79
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_83
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 76
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_84
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 76
+        width: 20
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_85
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 56
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_86
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 55
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_87
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 52
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_88
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 57
+        width: 24
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_89
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 51
+        width: 20
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_90
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 53
+        width: 21
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_91
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 51
+        width: 24
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_92
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 53
+        width: 22
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_93
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 54
+        width: 19
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_94
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 52
+        width: 21
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_95
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 31
+        width: 24
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_96
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 28
+        width: 23
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_97
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 29
+        width: 23
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_98
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 28
+        width: 24
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_99
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 29
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_100
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 29
+        width: 9
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_101
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 30
+        width: 21
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_102
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 31
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_103
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 30
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_104
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 29
+        width: 23
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_105
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8
+        width: 24
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_106
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 6
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: meatxveggies_107
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 6
+        width: 21
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
