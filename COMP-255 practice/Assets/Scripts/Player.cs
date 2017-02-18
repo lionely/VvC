@@ -14,13 +14,13 @@ public class Player : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		}
-	
+	}
+
 	// Update is called once per frame
 	void Update () {
 		//Moves Red right
 		if(Input.GetKeyUp(KeyCode.RightArrow)){
-			
+
 			player.velocity = Vector2.zero;
 			player.AddForce(moveRight);
 			player.velocity = Vector2.zero;
