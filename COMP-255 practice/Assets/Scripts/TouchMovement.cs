@@ -21,7 +21,7 @@ public class TouchMovement : MonoBehaviour {
 				//touch left
 				if (touchPos.x < player.position.x && pos != -1) 
 				{ 
-					this.transform.position = new Vector3 (player.transform.position.x - 2f, 
+					this.transform.position = new Vector3 (player.transform.position.x - 2.25f, 
 						player.transform.position.y, -1);
 					pos = pos - 1;
 				} 
@@ -29,7 +29,7 @@ public class TouchMovement : MonoBehaviour {
 				//touch right
 				else if (touchPos.x > player.position.x && pos != 1) 
 				{ 
-					this.transform.position = new Vector3 (player.transform.position.x + 2f, 
+					this.transform.position = new Vector3 (player.transform.position.x + 2.25f, 
 						player.transform.position.y, -1);
 					pos = pos + 1;
 				}
