@@ -32,7 +32,7 @@ public class GameController : MonoBehaviour {
 
 		Touch t = Input.GetTouch (0);
 
-		if (t.phase == TouchPhase.Ended) {	//At beginning of touch
+		if (t.phase == TouchPhase.Ended) {	//At end of touch
 			paused = !paused;
 		}
 
