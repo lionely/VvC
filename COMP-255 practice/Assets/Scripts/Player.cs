@@ -5,16 +5,16 @@ using UnityEngine;
 public class Player : MonoBehaviour {
 	private Vector2 moveRight = new Vector2(100,0);
 	private Rigidbody2D player;
+	public GameController gameController;
+
 	//Do not forget for Addforce to work the rigidbody must be dynamic and simulated
 	private void Awake(){
 		player = GetComponent<Rigidbody2D>();
 	}
-
-
-
+		
 	// Use this for initialization
 	void Start () {
-		}
+	}
 	
 	// Update is called once per frame
 	void Update () {
@@ -24,8 +24,6 @@ public class Player : MonoBehaviour {
 			player.velocity = Vector2.zero;
 			player.AddForce(moveRight);
 			player.velocity = Vector2.zero;
-
-
 		}
 		//Moves Red left
 		if(Input.GetKeyUp(KeyCode.LeftArrow)){
@@ -45,17 +43,13 @@ public class Player : MonoBehaviour {
 			// Move object across XY plane
 			//transform.Translate(-touchDeltaPosition.x * speed, -touchDeltaPosition.y * speed, 0);
 		}
-
-
 	}
 
 	void OnCollisionEnter2D(Collision2D col) {
 		if (col.gameObject.tag == "Food") {
 			//print ("Should be destroyed.");
 			Destroy(col.gameObject,.1f);
+			gameController.AddScore ();
 		}
 	}
-
-
-
 }
