@@ -1,18 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameController : MonoBehaviour {
 
-	public GUIText scoreText;
+	public Text scoreText;
+	public Text buttonText;
 	private int score;
 	public bool paused;
 
 	// Use this for initialization
-	void Start () {
+	void Awake () {
+		scoreText = GameObject.Find("ScoreText").GetComponent<Text> (); //UI Text Object
+		buttonText = GameObject.Find("ButtonText").GetComponent<Text> ();
 		paused = false;
 		score = 0;
-		UpdateScore ();
 	}
 	
 	// Update is called once per frame
@@ -21,10 +24,6 @@ public class GameController : MonoBehaviour {
 
 	public void AddScore () {
 		score += 1;
-		UpdateScore ();
-	}
-
-	void UpdateScore() {
 		scoreText.text = "Score: " + score;
 	}
 
@@ -38,10 +37,12 @@ public class GameController : MonoBehaviour {
 
 		if (paused) {
 			Time.timeScale = 0;
+			buttonText.text = "Resume";
 		}
 
 		else if (!paused) {
 			Time.timeScale = 1;
+			buttonText.text = "Pause";
 		}
 	}
 }
