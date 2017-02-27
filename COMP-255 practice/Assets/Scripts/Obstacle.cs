@@ -5,23 +5,39 @@ using UnityEngine;
 public class Obstacle : MonoBehaviour {
 	private Rigidbody2D rigi;
 	public Vector2 velocity = new Vector2 (0, -4);
-	public float range = 4; // Range of random variation
+
+	public float[] foodPosX;
+	private int index;
+	//public Transform obstaclePos = new Transform (0, 0, 0);
+
+
+
+
+	//All at y=9
 
 	private void Awake(){
 		rigi = GetComponent<Rigidbody2D>();
+		foodPosX     = new float[3];
+		foodPosX [0] = -2.25f;
+		foodPosX [1] =  0f;
+		foodPosX [2] = 2.25f;
+
+		
 	}
 
-	// Use this for initialization
+	// Use this for initialization of an Obstacle
 	void Start () {
+		index = Random.Range (0, 3);
+		transform.position = new Vector2 (foodPosX [index], 9); // Decided to put foods at y = 9.
 		rigi.velocity = velocity; // sets velocity to the one above.
-		//transform.position = new Vector3 (transform.position.x - range * Random.value, 
-			//transform.position.y , transform.position.z);
+
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		
-	}
+		}
 
 
 }
