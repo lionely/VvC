@@ -14,7 +14,7 @@ public class Obstacle : MonoBehaviour {
 	// Called when the obstacle is generated
 	private void Awake(){
 		rigi = GetComponent<Rigidbody2D>();
-		gc = (GameController) MonoBehaviour.FindObjectOfType<GameController>();
+		gc = GameController.FindObjectOfType<GameController> ();
 		rigi.velocity = new Vector2(0.0f, gc.speed);
 		foodPosX     = new float[3];
 		foodPosX [0] = -2.25f;
