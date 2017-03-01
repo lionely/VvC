@@ -7,8 +7,11 @@ public class GameController : MonoBehaviour {
 
 	public Text scoreText;
 	public Text buttonText;
+	public float speed;
 	private int score;
 	public bool paused;
+	private static float INITIAL_SPEED = -4.0f;
+	private static float ACCELERATION = 0.1f;
 
 	// Use this for initialization
 	void Awake () {
@@ -16,10 +19,13 @@ public class GameController : MonoBehaviour {
 		buttonText = GameObject.Find("ButtonText").GetComponent<Text> ();
 		paused = false;
 		score = 0;
+		speed = INITIAL_SPEED;
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		speed = speed - ACCELERATION;
+		print (speed);
 	}
 
 	public void AddScore () {
