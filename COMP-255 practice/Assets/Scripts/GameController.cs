@@ -25,7 +25,6 @@ public class GameController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		speed = speed - ACCELERATION;
-		print (speed);
 	}
 
 	public void AddScore () {
