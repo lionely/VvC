@@ -15,7 +15,7 @@ public class Generate : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		//print (chanceVM);
-		InvokeRepeating ("CreateObstacle", 1f, 1.5f);
+		InvokeRepeating ("CreateObstacle", 1f, .5f);
 	}
 	
 	// Update is called once per frame

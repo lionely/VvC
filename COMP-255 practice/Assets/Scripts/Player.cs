@@ -46,10 +46,18 @@ public class Player : MonoBehaviour {
 	}
 
 	void OnCollisionEnter2D(Collision2D col) {
-		if (col.gameObject.tag == "Food") {
-			//print ("Should be destroyed.");
+		//player gains game point
+		if (col.gameObject.tag == "Vege") {
 			Destroy(col.gameObject,.1f);
-			gameController.AddScore ();
+			gameController.AddScore();
 		}
+		//player loses life point
+		else if (col.gameObject.tag == "Meat") {
+			gameController.LoseLife();
+		}
+	}
+
+	public void DestroyPlayer() {
+		Destroy(this.gameObject);
 	}
 }

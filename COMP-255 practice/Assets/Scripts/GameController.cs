@@ -5,10 +5,13 @@ using UnityEngine.UI;
 
 public class GameController : MonoBehaviour {
 
+	public Player player;
 	public Text scoreText;
+	public Text lifeText;
 	public Text buttonText;
 	public float speed;
 	private int score;
+	private int life;
 	public bool paused;
 	private static float INITIAL_SPEED = -4.0f;
 	private static float ACCELERATION = 0.02f;
@@ -16,9 +19,11 @@ public class GameController : MonoBehaviour {
 	// Use this for initialization
 	void Awake () {
 		scoreText = GameObject.Find("ScoreText").GetComponent<Text> (); //UI Text Object
+		lifeText = GameObject.Find("LifeText").GetComponent<Text> ();
 		buttonText = GameObject.Find("ButtonText").GetComponent<Text> ();
 		paused = false;
 		score = 0;
+		life = 3;
 		speed = INITIAL_SPEED;
 	}
 	
@@ -30,6 +35,16 @@ public class GameController : MonoBehaviour {
 	public void AddScore () {
 		score += 1;
 		scoreText.text = "Score: " + score;
+	}
+
+	public void LoseLife () {
+		life -= 1;
+		lifeText.text = "Life: " + life;
+
+		if (life <= 0) {
+			player.DestroyPlayer();
+			Time.timeScale = 0;
+		}
 	}
 
 	public void Pause () {
