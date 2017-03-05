@@ -15,7 +15,7 @@ public class DestroyOffScreen : MonoBehaviour {
 	}
 
 	void OnCollisionEnter2D(Collision2D col) {
-		if (col.gameObject.tag == "Food") {
+		if (col.gameObject.tag == "Vege"  || col.gameObject.tag == "Meat") {
 			//print ("Should be destroyed.");
 			Destroy(col.gameObject,.5f);
 		}
