@@ -53,6 +53,7 @@ public class Player : MonoBehaviour {
 		}
 		//player loses life point
 		else if (col.gameObject.tag == "Meat") {
+			Destroy(col.gameObject,.1f);
 			gameController.LoseLife();
 		}
 	}
