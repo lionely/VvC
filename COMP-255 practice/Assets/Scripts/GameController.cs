@@ -14,7 +14,7 @@ public class GameController : MonoBehaviour {
 	private int life;
 	public bool paused;
 	private static float INITIAL_SPEED = -4.0f;
-	private static float ACCELERATION = 0.02f;
+	private static float ACCELERATION = 0.01f;
 
 	// Use this for initialization
 	void Awake () {
