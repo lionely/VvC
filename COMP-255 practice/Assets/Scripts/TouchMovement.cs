@@ -15,7 +15,7 @@ public class TouchMovement : MonoBehaviour {
 		{
 			Touch t = Input.GetTouch (0);
 
-			if (t.phase == TouchPhase.Ended) //At end of touch:
+			if (t.phase == TouchPhase.Began) //At end of touch:
 			{
 				Vector3 touchPos = Camera.main.ScreenToWorldPoint(new Vector3(t.position.x, t.position.y, 0));          
 				//touch left
