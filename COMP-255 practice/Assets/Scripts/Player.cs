@@ -6,6 +6,7 @@ public class Player : MonoBehaviour {
 	private Vector2 moveRight = new Vector2(100,0);
 	private Rigidbody2D player;
 	public GameController gameController;
+	private bool Vegan;
 
 	//Do not forget for Addforce to work the rigidbody must be dynamic and simulated
 	private void Awake(){
@@ -14,6 +15,7 @@ public class Player : MonoBehaviour {
 		
 	// Use this for initialization
 	void Start () {
+		Vegan = true;
 	}
 	
 	// Update is called once per frame
@@ -46,15 +48,36 @@ public class Player : MonoBehaviour {
 	}
 
 	void OnCollisionEnter2D(Collision2D col) {
-		//player gains game point
-		if (col.gameObject.tag == "Vege") {
-			Destroy(col.gameObject,.1f);
-			gameController.AddScore();
+
+		if (Vegan) {
+			if (col.gameObject.tag == "Veggie") {
+				Destroy(col.gameObject,.1f);
+				gameController.AddScore();
+			}
+			else if (col.gameObject.tag == "Meat") {
+				Destroy(col.gameObject,.1f);
+				gameController.LoseLife();
+			}
+			// Mushroom
+			else {
+				Destroy(col.gameObject,.1f);
+				Vegan = !Vegan;
+			}
 		}
-		//player loses life point
-		else if (col.gameObject.tag == "Meat") {
-			Destroy(col.gameObject,.1f);
-			gameController.LoseLife();
+		else {
+			if (col.gameObject.tag == "Veggie") {
+				Destroy(col.gameObject,.1f);
+				gameController.LoseLife();
+			}
+			else if (col.gameObject.tag == "Meat") {
+				Destroy(col.gameObject,.1f);
+				gameController.AddScore();
+			}
+			// Mushroom
+			else {
+				Destroy(col.gameObject,.1f);
+				Vegan = !Vegan;
+			}
 		}
 	}
 

@@ -22,7 +22,7 @@ public class SwipeManager : MonoBehaviour {
 				distance = Mathf.Sqrt((deltaX * deltaX) + (deltaY * deltaY));
 				bool swipedSideways = Mathf.Abs(deltaX) > Mathf.Abs(deltaY);
 
-				if (distance > 0.5f)
+				if (distance > 1f)
 				{
 					if (swipedSideways && deltaX > 0 && pos != -1) //swiped left
 					{
