@@ -22,29 +22,19 @@ public class SwipeManager : MonoBehaviour {
 				distance = Mathf.Sqrt((deltaX * deltaX) + (deltaY * deltaY));
 				bool swipedSideways = Mathf.Abs(deltaX) > Mathf.Abs(deltaY);
 
-				if (distance > 100f)
+				if (distance > 0.5f)
 				{
-					if (swipedSideways && deltaX > 0) //&& pos != -6) //swiped left
+					if (swipedSideways && deltaX > 0 && pos != -1) //swiped left
 					{
-						this.transform.position = new Vector3(this.transform.position.x - 0.5f, 
+						this.transform.position = new Vector3(this.transform.position.x - 2.25f, 
 							this.transform.position.y, -1);
 						pos = pos - 1;
 					}
-					else if (swipedSideways && deltaX <= 0) //&& pos != 6) //swiped right
+					else if (swipedSideways && deltaX <= 0 && pos != 1) //swiped right
 					{
-						this.transform.position = new Vector3(this.transform.position.x + 0.5f, 
+						this.transform.position = new Vector3(this.transform.position.x + 2.25f, 
 							this.transform.position.y, -1);
 						pos = pos + 1;
-					}
-					else if (!swipedSideways && deltaY > 0) //swiped down
-					{
-						this.transform.position = new Vector3(this.transform.position.x, 
-							this.transform.position.y - 0.5f, -1);					
-					}
-					else if (!swipedSideways && deltaY <= 0)  //swiped up
-					{
-						this.transform.position = new Vector3(this.transform.position.x, 
-							this.transform.position.y + 0.5f, -1);
 					}
 					hasSwiped = true;
 				}
