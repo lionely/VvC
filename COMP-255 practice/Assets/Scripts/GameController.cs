@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour {
 
@@ -44,6 +45,7 @@ public class GameController : MonoBehaviour {
 		if (life <= 0) {
 			player.DestroyPlayer();
 			Time.timeScale = 0;
+			SceneManager.LoadScene ("GameOver");
 		}
 	}
 
@@ -58,6 +60,7 @@ public class GameController : MonoBehaviour {
 		if (paused) {
 			Time.timeScale = 0;
 			buttonText.text = "Resume";
+			player.enabled = false;
 		}
 
 		else if (!paused) {
