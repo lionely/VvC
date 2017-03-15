@@ -44,8 +44,7 @@ public class GameController : MonoBehaviour {
 
 		if (life <= 0) {
 			player.DestroyPlayer();
-			Time.timeScale = 0;
-			SceneManager.LoadScene ("GameOver");
+			SceneManager.LoadScene ("GameOver",LoadSceneMode.Single);
 		}
 	}
 
@@ -66,6 +65,7 @@ public class GameController : MonoBehaviour {
 		else if (!paused) {
 			Time.timeScale = 1;
 			buttonText.text = "Pause";
+			player.enabled = true;
 		}
 	}
 }

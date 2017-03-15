@@ -18,7 +18,7 @@ public class mainmenu : MonoBehaviour {
 	public void StartGame(){
 //		Instantiate(levelLoader, levelLoader.transform.position, levelLoader.transform.rotation);
 //		loading.levelToLoad = "comp225";
-		SceneManager.LoadScene ("comp225");//loads scenes
+		SceneManager.LoadScene ("comp225",LoadSceneMode.Single);//loads scenes
 
 	}
 	

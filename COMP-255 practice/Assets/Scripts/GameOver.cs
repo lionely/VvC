@@ -12,7 +12,7 @@ public class GameOver : MonoBehaviour {
 
 
 	public void TryAgain(){
-		SceneManager.LoadScene ("comp225");//loads scenes
+		SceneManager.LoadScene ("comp225",LoadSceneMode.Single);//loads scenes
 	}
 	// Update is called once per frame
 	void Update () {
