@@ -11,11 +11,13 @@ public class GameController : MonoBehaviour {
 	public Text lifeText;
 	public Text buttonText;
 	public float speed;
+	private float acceleration;
 	private int score;
 	private int life;
 	public bool paused;
 	private static float INITIAL_SPEED = -4.0f;
-	private static float ACCELERATION = 0.01f;
+	private static float INITIAL_ACCELERATION = 0.01f;
+	private static float ACCELERATION_DECAY = 0.9999f;
 
 	// Use this for initialization
 	void Awake () {
@@ -26,11 +28,15 @@ public class GameController : MonoBehaviour {
 		score = 0;
 		life = 3;
 		speed = INITIAL_SPEED;
+		acceleration = INITIAL_ACCELERATION;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		speed = speed - ACCELERATION;
+		speed = speed - acceleration;
+		acceleration = acceleration * ACCELERATION_DECAY;
+		print (acceleration);
+		print (speed);
 	}
 
 	public void AddScore () {
