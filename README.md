@@ -1,3 +1,3 @@
 # VvC
 
-You should see this after you've 'pulled from github.
+You should see this after you've pulled from github.

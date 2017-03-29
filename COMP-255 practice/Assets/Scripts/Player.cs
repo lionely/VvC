@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class Player : MonoBehaviour {
 	private Vector2 moveRight = new Vector2(100,0);
+
 	private Rigidbody2D player;
 	public GameController gameController;
+	public Animator animator;
+
 	private bool Vegan;
 
 	//Do not forget for Addforce to work the rigidbody must be dynamic and simulated
@@ -15,7 +18,8 @@ public class Player : MonoBehaviour {
 		
 	// Use this for initialization
 	void Start () {
-		Vegan = true;
+		Vegan = false;
+		animator = GetComponent<Animator> ();
 	}
 	
 	// Update is called once per frame
@@ -49,6 +53,7 @@ public class Player : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D col) {
 
+		// Vegan Mode
 		if (Vegan) {
 			if (col.gameObject.tag == "Veggie") {
 				Destroy(col.gameObject,.1f);
@@ -58,12 +63,13 @@ public class Player : MonoBehaviour {
 				Destroy(col.gameObject,.1f);
 				gameController.LoseLife();
 			}
-			// Mushroom
-			else {
+			else { // Mushroom 
 				Destroy(col.gameObject,.1f);
 				Vegan = !Vegan;
+				animator.SetTrigger ("toCarnivore");
 			}
 		}
+		// Canivore Mode
 		else {
 			if (col.gameObject.tag == "Veggie") {
 				Destroy(col.gameObject,.1f);
@@ -73,10 +79,10 @@ public class Player : MonoBehaviour {
 				Destroy(col.gameObject,.1f);
 				gameController.AddScore();
 			}
-			// Mushroom
-			else {
+			else { // Mushroom
 				Destroy(col.gameObject,.1f);
 				Vegan = !Vegan;
+				animator.SetTrigger ("toVegan");
 			}
 		}
 	}
