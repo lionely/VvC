@@ -9,7 +9,7 @@ public class Player : MonoBehaviour {
 	public GameController gameController;
 	public Animator animator;
 
-	private bool Vegan;
+	public static bool Vegan;
 
 	//Do not forget for Addforce to work the rigidbody must be dynamic and simulated
 	private void Awake(){
@@ -18,26 +18,14 @@ public class Player : MonoBehaviour {
 		
 	// Use this for initialization
 	void Start () {
-		Vegan = false;
+		//Vegan = false;
+		print(Vegan);
 		animator = GetComponent<Animator> ();
+		setVegan ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		//Moves Red right
-		if(Input.GetKeyUp(KeyCode.RightArrow)){
-			
-			player.velocity = Vector2.zero;
-			player.AddForce(moveRight);
-			player.velocity = Vector2.zero;
-		}
-		//Moves Red left
-		if(Input.GetKeyUp(KeyCode.LeftArrow)){
-			player.velocity = Vector2.zero;
-			player.AddForce(-1*moveRight);
-			//player.velocity += Vector2.left*speed;
-			player.velocity = Vector2.zero;
-		}
 
 		if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Moved) {
 			// Get movement of the finger since last frame
@@ -84,6 +72,16 @@ public class Player : MonoBehaviour {
 				Vegan = !Vegan;
 				animator.SetTrigger ("toVegan");
 			}
+		}
+	}
+
+
+	void setVegan(){
+		if (Vegan) {
+			animator.SetTrigger ("toVegan");
+		} else 
+		{
+			animator.SetTrigger ("toCarnivore");
 		}
 	}
 
