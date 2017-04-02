@@ -21,7 +21,7 @@ public class Player : MonoBehaviour {
 		//Vegan = false;
 		print(Vegan);
 		animator = GetComponent<Animator> ();
-		setVegan ();
+		setVegan ();// to start as Vegan or not.
 	}
 	
 	// Update is called once per frame

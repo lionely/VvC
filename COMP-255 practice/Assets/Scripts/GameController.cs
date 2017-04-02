@@ -12,7 +12,7 @@ public class GameController : MonoBehaviour {
 	public Text buttonText;
 	public float speed;
 	private float acceleration;
-	private int score;
+	public static int score;
 	private int life;
 	public bool paused;
 	private static float INITIAL_SPEED = -4.0f;
@@ -35,8 +35,8 @@ public class GameController : MonoBehaviour {
 	void Update () {
 		speed = speed - acceleration;
 		acceleration = acceleration * ACCELERATION_DECAY;
-		print (acceleration);
-		print (speed);
+//		print (acceleration);
+//		print (speed);
 	}
 
 	public void AddScore () {
@@ -47,6 +47,7 @@ public class GameController : MonoBehaviour {
 	public void LoseLife () {
 		life -= 1;
 		lifeText.text = "Life: " + life;
+
 
 		if (life <= 0) {
 			player.DestroyPlayer();
