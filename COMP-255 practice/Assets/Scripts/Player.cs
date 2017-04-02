@@ -11,6 +11,9 @@ public class Player : MonoBehaviour {
 
 	public static bool Vegan;
 
+	public GameObject veganBackground;
+	public GameObject meatBackground;
+
 	//Do not forget for Addforce to work the rigidbody must be dynamic and simulated
 	private void Awake(){
 		player = GetComponent<Rigidbody2D>();
@@ -22,6 +25,9 @@ public class Player : MonoBehaviour {
 		print(Vegan);
 		animator = GetComponent<Animator> ();
 		setVegan ();// to start as Vegan or not.
+		if (!Vegan) {
+			switchBackground ();
+		}
 	}
 	
 	// Update is called once per frame
@@ -53,6 +59,7 @@ public class Player : MonoBehaviour {
 			}
 			else { // Mushroom 
 				Destroy(col.gameObject,.1f);
+				switchBackground() ;
 				Vegan = !Vegan;
 				animator.SetTrigger ("toCarnivore");
 			}
@@ -69,6 +76,7 @@ public class Player : MonoBehaviour {
 			}
 			else { // Mushroom
 				Destroy(col.gameObject,.1f);
+				switchBackground ();
 				Vegan = !Vegan;
 				animator.SetTrigger ("toVegan");
 			}
@@ -79,7 +87,8 @@ public class Player : MonoBehaviour {
 	void setVegan(){
 		if (Vegan) {
 			animator.SetTrigger ("toVegan");
-		} else 
+		} 
+		else 
 		{
 			animator.SetTrigger ("toCarnivore");
 		}
@@ -87,5 +96,15 @@ public class Player : MonoBehaviour {
 
 	public void DestroyPlayer() {
 		Destroy(this.gameObject);
+	}
+
+	public void switchBackground(){
+		if (veganBackground.transform.position.x == 0.0f) {
+			meatBackground.transform.position = new Vector3 (0.0f, -1.17f, 0.0f);
+			veganBackground.transform.position = new Vector3 (-15.0f, -1.17f, 0.0f);
+		} else {
+			veganBackground.transform.position = new Vector3 (0.0f, -1.17f, 0.0f);
+			meatBackground.transform.position = new Vector3 (-15.0f, -1.17f, 0.0f);;
+		}
 	}
 }
