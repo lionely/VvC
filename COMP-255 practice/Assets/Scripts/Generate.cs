@@ -36,15 +36,22 @@ public class Generate : MonoBehaviour {
 		chanceVM = Random.Range (0, 11); // 0-10 
 		index = Random.Range (0, 2); // 0 or 1
 
-		timeTillObstacle -= OBSTACLE_GENERATION_CONSTANT;
-		timeTillDecoration -= DECORATION_GENERATION_CONSTANT;
-		if (timeTillObstacle <= 0.0f) {
-			CreateObstacle ();
-			timeTillObstacle = 1.0f / (-gc.speed);
-		}
-		if (timeTillDecoration <= 0.0f) {
-			CreateDecoration ();
-			timeTillDecoration = 1.0f / (-gc.speed);
+		// Only generate objects if game not paused
+		if (!gc.paused) {
+
+			// Decrement the time until the next Obstacle or
+			// Decoration is generated
+			timeTillObstacle -= OBSTACLE_GENERATION_CONSTANT;
+			timeTillDecoration -= DECORATION_GENERATION_CONSTANT;
+
+			if (timeTillObstacle <= 0.0f) {
+				CreateObstacle ();
+				timeTillObstacle = 1.0f / (-gc.speed);
+			}
+			if (timeTillDecoration <= 0.0f) {
+				CreateDecoration ();
+				timeTillDecoration = 1.0f / (-gc.speed);
+			}
 		}
 	}
 
