@@ -5,7 +5,6 @@ using UnityEngine;
 public class Player : MonoBehaviour {
 	private Vector2 moveRight = new Vector2(100,0);
 
-	private Rigidbody2D player;
 	public GameController gameController;
 	public Animator animator;
 
@@ -16,13 +15,13 @@ public class Player : MonoBehaviour {
 
 	//Do not forget for Addforce to work the rigidbody must be dynamic and simulated
 	private void Awake(){
-		player = GetComponent<Rigidbody2D>();
+		
 	}
 		
 	// Use this for initialization
 	void Start () {
 		//Vegan = false;
-		print(Vegan);
+		//print(Vegan);
 		animator = GetComponent<Animator> ();
 		setVegan ();// to start as Vegan or not.
 		if (!Vegan) {
