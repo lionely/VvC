@@ -33,15 +33,15 @@ public class Player : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Moved) {
-			// Get movement of the finger since last frame
-			Vector2 touchDeltaPosition = Input.GetTouch(0).deltaPosition;
-			player.velocity = Vector2.zero;
-			player.AddForce(moveRight);
-			player.velocity = Vector2.zero;
+	}
 
-			// Move object across XY plane
-			//transform.Translate(-touchDeltaPosition.x * speed, -touchDeltaPosition.y * speed, 0);
+	void setVegan(){
+		if (Vegan) {
+			animator.SetTrigger ("toVegan");
+		} 
+		else 
+		{
+			animator.SetTrigger ("toCarnivore");
 		}
 	}
 
@@ -80,17 +80,6 @@ public class Player : MonoBehaviour {
 				Vegan = !Vegan;
 				animator.SetTrigger ("toVegan");
 			}
-		}
-	}
-
-
-	void setVegan(){
-		if (Vegan) {
-			animator.SetTrigger ("toVegan");
-		} 
-		else 
-		{
-			animator.SetTrigger ("toCarnivore");
 		}
 	}
 
