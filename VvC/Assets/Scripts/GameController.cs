@@ -23,7 +23,7 @@ public class GameController : MonoBehaviour {
 	void Awake () {
 		scoreText = GameObject.Find("ScoreText").GetComponent<Text> (); //UI Text Object
 		lifeText = GameObject.Find("LifeText").GetComponent<Text> ();
-		buttonText = GameObject.Find("ButtonText").GetComponent<Text> ();
+		buttonText = GameObject.Find("PauseButtonText").GetComponent<Text> ();
 		paused = false;
 		score = 0;
 		life = 3;
