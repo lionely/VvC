@@ -6,27 +6,34 @@ using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour {
 
-	public Player player;
-	public Text scoreText;
-	public Text lifeText;
-	public Text buttonText;
+	Player player;
+	ShakeCamera camShake;
+	Text scoreText;
+	Text lifeText;
+	Text buttonText;
+
 	public float speed;
 	private float acceleration;
 	public static int score;
 	private int life;
 	public bool paused;
+
 	private static float INITIAL_SPEED = -4.0f;
 	private static float INITIAL_ACCELERATION = 0.01f;
 	private static float ACCELERATION_DECAY = 0.9999f;
 
 	// Use this for initialization
 	void Awake () {
-		scoreText = GameObject.Find("ScoreText").GetComponent<Text> (); //UI Text Object
+		player = GameObject.Find("Player").GetComponent<Player> ();
+		camShake = GameObject.Find("MainCamera").GetComponent<ShakeCamera> ();
+		scoreText = GameObject.Find("ScoreText").GetComponent<Text> ();
 		lifeText = GameObject.Find("LifeText").GetComponent<Text> ();
 		buttonText = GameObject.Find("PauseButtonText").GetComponent<Text> ();
+
 		paused = false;
 		score = 0;
 		life = 3;
+
 		speed = INITIAL_SPEED;
 		acceleration = INITIAL_ACCELERATION;
 	}
@@ -35,8 +42,6 @@ public class GameController : MonoBehaviour {
 	void Update () {
 		speed = speed - acceleration;
 		acceleration = acceleration * ACCELERATION_DECAY;
-//		print (acceleration);
-//		print (speed);
 	}
 
 	public void AddScore () {
@@ -48,6 +53,11 @@ public class GameController : MonoBehaviour {
 		life -= 1;
 		lifeText.text = "Life: " + life;
 
+		// Shakes camera
+		camShake.Shake(0.2f,0.5f);
+
+		// Slow Down by 20%
+		speed = speed * 0.8f;
 
 		if (life <= 0) {
 			player.DestroyPlayer();

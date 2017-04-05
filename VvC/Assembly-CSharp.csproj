@@ -57,6 +57,7 @@
      <Compile Include="Assets\Scripts\MainMenu.cs" />
      <Compile Include="Assets\Scripts\Obstacle.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
+     <Compile Include="Assets\Scripts\ShakeCamera.cs" />
      <Compile Include="Assets\Scripts\SwipeMovement.cs" />
      <Compile Include="Assets\Scripts\TouchMovement.cs" />
      <Compile Include="Assets\Scripts\UVscroll.cs" />
