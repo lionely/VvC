@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 using System.Collections.Generic;
 using UnityEngine.UI;
 
-public class mainmenu : MonoBehaviour {
+public class MainMenu : MonoBehaviour {
 
 	GameObject music;
 	public GameObject levelLoader;

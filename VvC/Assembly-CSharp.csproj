@@ -46,19 +46,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\BaseLayer2.cs" />
      <Compile Include="Assets\Scripts\Decoration.cs" />
      <Compile Include="Assets\Scripts\DestroyOffScreen.cs" />
      <Compile Include="Assets\Scripts\GameController.cs" />
      <Compile Include="Assets\Scripts\GameOver.cs" />
      <Compile Include="Assets\Scripts\Generate.cs" />
      <Compile Include="Assets\Scripts\HighScore.cs" />
+     <Compile Include="Assets\Scripts\Loading.cs" />
+     <Compile Include="Assets\Scripts\MainMenu.cs" />
      <Compile Include="Assets\Scripts\Obstacle.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\SwipeMovement.cs" />
      <Compile Include="Assets\Scripts\TouchMovement.cs" />
      <Compile Include="Assets\Scripts\UVscroll.cs" />
-     <Compile Include="Assets\Scripts\loading.cs" />
-     <Compile Include="Assets\Scripts\mainmenu.cs" />
  <Reference Include="UnityEngine.Analytics">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>

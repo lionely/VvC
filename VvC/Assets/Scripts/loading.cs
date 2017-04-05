@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
 
-public class loading : MonoBehaviour {
+public class Loading : MonoBehaviour {
 
 	public static string levelToLoad;
 	public Texture2D theTexture;

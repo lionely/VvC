@@ -18,7 +18,7 @@ public class Player : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		animator = GetComponent<Animator> ();
-		setVegan ();// to start as Vegan or not.
+		setVegan (); //Sets Initial Mode
 		if (!Vegan) {
 			switchBackground ();
 		}
@@ -29,7 +29,7 @@ public class Player : MonoBehaviour {
 
 	}
 
-	//Sets Initial Mode
+	// Sets Initial Mode
 	void setVegan(){
 		if (Vegan) {
 			animator.SetTrigger ("toVegan");
@@ -40,6 +40,7 @@ public class Player : MonoBehaviour {
 		}
 	}
 
+	// Ditects Collision
 	void OnCollisionEnter2D(Collision2D col) {
 
 		// Vegan Mode
