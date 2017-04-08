@@ -40,7 +40,7 @@ public class Player : MonoBehaviour {
 		}
 	}
 
-	// Ditects Collision
+	// Detects Collision
 	void OnCollisionEnter2D(Collision2D col) {
 
 		// Vegan Mode

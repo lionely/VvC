@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class Generate : MonoBehaviour {
 
+	Player player;
 	public GameObject[] veggie = new GameObject[2];
 	public GameObject[] meat = new GameObject[2];
 	public GameObject[] mushroom = new GameObject[1];
 
-	public GameObject decoration;
+	public GameObject[] decorationMeat = new GameObject[3];
+	public GameObject[] decorationVeggie = new GameObject[3];
 
 	private GameController gc;
 
@@ -28,7 +30,7 @@ public class Generate : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		gc = FindObjectOfType<GameController> ();
-
+		player = GameObject.Find("Player").GetComponent<Player> ();
 	}
 
 	// Update is called once per frame
@@ -72,10 +74,11 @@ public class Generate : MonoBehaviour {
 
 	//Creates different decorations randomly.
 	void CreateDecoration(){
-		if (chanceVM == 1) {
-			Instantiate (decoration);
+		int i = Random.Range (0, 3);
+		if (Player.Vegan) {
+			Instantiate (decorationVeggie [index]);
 		}  else {
-			Instantiate (decoration);
+			Instantiate (decorationMeat [index]);
 		}
 
 	}

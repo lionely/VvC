@@ -398,7 +398,14 @@ MonoBehaviour:
   - {fileID: 1930948078634370, guid: c2b822f1cbaf3455687d5870aad0d63c, type: 2}
   mushroom:
   - {fileID: 1174265519577620, guid: 6ead60e62c2bd4748a927fe2f318103c, type: 2}
-  decoration: {fileID: 1815173895466292, guid: 62dfa3a7d75454f52a1474b42d0680f1, type: 2}
+  decorationMeat:
+  - {fileID: 1815173895466292, guid: 62dfa3a7d75454f52a1474b42d0680f1, type: 2}
+  - {fileID: 1630474013851058, guid: e414784a9bf7c4a1bb4fe03fa332e923, type: 2}
+  - {fileID: 1992808579391490, guid: 306b3f28cc8a949d5abdad3056a0cf97, type: 2}
+  decorationVeggie:
+  - {fileID: 1304091180250238, guid: 90cdef417c1d245e7a3d96632d066796, type: 2}
+  - {fileID: 1809619234759672, guid: 8ecb921bdc2e9423bb55b33ef2054e31, type: 2}
+  - {fileID: 1128204303735160, guid: 80bb8f423c7034014a2803f7659a1535, type: 2}
 --- !u!4 &178350552
 Transform:
   m_ObjectHideFlags: 0
@@ -556,6 +563,7 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114794878363636748, guid: 0dbddcd055de644399d79b63277e1de8, type: 2}
+    - {fileID: 114941264502763752, guid: 0dbddcd055de644399d79b63277e1de8, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 0dbddcd055de644399d79b63277e1de8, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &388122394 stripped
@@ -574,6 +582,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a32b2d51071ac4e9288d27057e648dcf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &388122396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 388122394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e3cbed1421304327833c4091a247aca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameController: {fileID: 955103204}
+  animator: {fileID: 0}
+  veganBackground: {fileID: 133590669}
+  meatBackground: {fileID: 1102898732}
 --- !u!1 &719811397
 GameObject:
   m_ObjectHideFlags: 0

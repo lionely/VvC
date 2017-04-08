@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 114323995062838368}
   - component: {fileID: 61230004136826554}
   - component: {fileID: 50798888539093924}
+  - component: {fileID: 114466570758034066}
   m_Layer: 0
   m_Name: Drumstick
   m_TagString: Meat
@@ -69,7 +70,7 @@ BoxCollider2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1128204303735160}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -83,12 +84,24 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1128204303735160}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cf34dbcbffe1d47a08ae87e7a932f663, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   foodPosX: []
+--- !u!114 &114466570758034066
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1128204303735160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9ccc576cfd5341049ac0dced17df2a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  decorationPosX: []
 --- !u!212 &212971218389608418
 SpriteRenderer:
   m_ObjectHideFlags: 1
