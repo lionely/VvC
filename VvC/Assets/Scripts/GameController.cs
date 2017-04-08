@@ -11,20 +11,26 @@ public class GameController : MonoBehaviour {
 	Text scoreText;
 	Text lifeText;
 	Text buttonText;
+	Rigidbody2D rb;
 
 	public float speed;
 	private float acceleration;
 	public static int score;
 	private int life;
 	public bool paused;
+	private bool exploded = false;
 
 	private static float INITIAL_SPEED = -4.0f;
 	private static float INITIAL_ACCELERATION = 0.01f;
 	private static float ACCELERATION_DECAY = 0.9999f;
 
+	public GameObject deathExplosion;
+//	public AudioClip explosionSound;
+
 	// Use this for initialization
 	void Awake () {
 		player = GameObject.Find("Player").GetComponent<Player> ();
+		rb = player.GetComponent<Rigidbody2D> ();
 		camShake = GameObject.Find("MainCamera").GetComponent<ShakeCamera> ();
 		scoreText = GameObject.Find("ScoreText").GetComponent<Text> ();
 		lifeText = GameObject.Find("LifeText").GetComponent<Text> ();
@@ -42,6 +48,10 @@ public class GameController : MonoBehaviour {
 	void Update () {
 		speed = speed - acceleration;
 		acceleration = acceleration * ACCELERATION_DECAY;
+
+		if (exploded == false) {
+			explode ();
+		}
 	}
 
 	public void AddScore () {
@@ -60,18 +70,15 @@ public class GameController : MonoBehaviour {
 		speed = speed * 0.8f;
 
 		if (life <= 0) {
-			player.DestroyPlayer();
-			SceneManager.LoadScene ("GameOver",LoadSceneMode.Single);
+			//player.DestroyPlayer();
+			//SceneManager.LoadScene ("GameOver",LoadSceneMode.Single);
+			death();
 		}
 	}
 
 	public void Pause () {
 
-		Touch t = Input.GetTouch (0);
-
-		if (t.phase == TouchPhase.Ended) {	//At end of touch
-			paused = !paused;
-		}
+		paused = !paused;
 
 		if (paused) {
 			Time.timeScale = 0;
@@ -84,5 +91,26 @@ public class GameController : MonoBehaviour {
 			buttonText.text = "Pause";
 			player.enabled = true;
 		}
+	}
+
+	public void death(){
+		rb.velocity = new Vector2(0.0f, 3.0f);
+		Destroy(player.GetComponent<BoxCollider2D> ());
+	}
+
+	public void explode(){
+		if (life <= 0 && rb.position.y >= 0.0f) {
+			rb.velocity = new Vector2 (0.0f, 0.0f);
+			Destroy (player.GetComponent<TouchMovement> ());
+			Destroy (GameObject.Find ("FoodItems").GetComponent<Generate> ());
+			Destroy (player.gameObject);	
+			Instantiate (deathExplosion, new Vector3(rb.position.x, rb.position.y, 0), Quaternion.Euler(0, 0, 0));
+			exploded = true;
+			Invoke("LoadGameOver", 4);
+		}
+	}
+
+	public void LoadGameOver(){
+		SceneManager.LoadScene ("GameOver",LoadSceneMode.Single);
 	}
 }

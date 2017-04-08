@@ -561,6 +561,21 @@ Prefab:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 50464404618929778, guid: 0dbddcd055de644399d79b63277e1de8,
+        type: 2}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212942659453521558, guid: 0dbddcd055de644399d79b63277e1de8,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 212942659453521558, guid: 0dbddcd055de644399d79b63277e1de8,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 1612276855
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114794878363636748, guid: 0dbddcd055de644399d79b63277e1de8, type: 2}
     - {fileID: 114941264502763752, guid: 0dbddcd055de644399d79b63277e1de8, type: 2}
@@ -825,6 +840,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0
   paused: 1
+  deathExplosion: {fileID: 139366, guid: b185c1a9cf067374586d095111b15bd1, type: 2}
 --- !u!4 &955103205
 Transform:
   m_ObjectHideFlags: 0
