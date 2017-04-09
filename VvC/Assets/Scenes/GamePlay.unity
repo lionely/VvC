@@ -612,6 +612,8 @@ MonoBehaviour:
   animator: {fileID: 0}
   veganBackground: {fileID: 133590669}
   meatBackground: {fileID: 1102898732}
+  fader: {fileID: 1990414972729742, guid: 166dfea3ed1b94c05ae8828ab6606c59, type: 2}
+  generate: {fileID: 0}
 --- !u!1 &719811397
 GameObject:
   m_ObjectHideFlags: 0
@@ -986,7 +988,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1102898732}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -15.0000305, y: -10.115252, z: -90}
+  m_LocalPosition: {x: -0.01, y: -9.96, z: -90}
   m_LocalScale: {x: 3.77, y: 4.24, z: 1}
   m_Children: []
   m_Father: {fileID: 1479963515}

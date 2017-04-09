@@ -58,6 +58,10 @@ public class HighScore : MonoBehaviour {
 		}
 	}
 
+	public void backToMenu()
+	{
+		SceneManager.LoadScene ("MainMenu", LoadSceneMode.Single);
+	}
 
 
 }

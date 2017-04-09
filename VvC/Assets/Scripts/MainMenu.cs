@@ -28,20 +28,28 @@ public class MainMenu : MonoBehaviour {
 	 */
 	public void HighScore()
 	{
-		SceneManager.LoadScene ("HighScore",LoadSceneMode.Single);//loads scenes
+		print ("Loads highscore");
+		Instantiate(levelLoader, levelLoader.transform.position, levelLoader.transform.rotation);
+		Loading.levelToLoad = "HighScore";
+		//SceneManager.LoadScene ("HighScore",LoadSceneMode.Single);//loads scenes
 	}
 
 	public void ChooseCarnivore()
 	{
 		Player.Vegan = false;
-		SceneManager.LoadScene ("GamePlay",LoadSceneMode.Single);//loads scenes
+		Instantiate(levelLoader, levelLoader.transform.position, levelLoader.transform.rotation);
+		Loading.levelToLoad = "GamePlay";
+		//SceneManager.LoadScene ("GamePlay",LoadSceneMode.Single);//loads scenes
 	}
 
 	public void ChooseVegan()
 	{
 		Player.Vegan = true;
-		SceneManager.LoadScene ("GamePlay",LoadSceneMode.Single);//loads scenes
+		Instantiate(levelLoader, levelLoader.transform.position, levelLoader.transform.rotation);
+		Loading.levelToLoad = "GamePlay";
+		//SceneManager.LoadScene ("GamePlay",LoadSceneMode.Single);//loads scenes
 	}
+
 
 }
 

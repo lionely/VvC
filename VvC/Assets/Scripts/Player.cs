@@ -9,34 +9,34 @@ public class Player : MonoBehaviour {
 	public GameObject veganBackground;
 	public GameObject meatBackground;
 
+	public GameObject fader;
+
 	public static bool Vegan;
 
-	private void Awake(){
-		
-	}
-		
 	// Use this for initialization
-	void Start () {
+	void Start () 
+	{
 		animator = GetComponent<Animator> ();
 		setVegan (); //Sets Initial Mode
-		if (!Vegan) {
-			switchBackground ();
-		}
-	}
+			}
 	
 	// Update is called once per frame
 	void Update () {
 
 	}
 
-	// Sets Initial Mode
+	// Sets Initial  bg, and player animation.
 	void setVegan(){
 		if (Vegan) {
 			animator.SetTrigger ("toVegan");
+			veganBackground.SetActive (true);
+			meatBackground.SetActive (false);
 		} 
 		else 
 		{
 			animator.SetTrigger ("toCarnivore");
+			veganBackground.SetActive (false);
+			meatBackground.SetActive (true);
 		}
 	}
 
@@ -85,12 +85,33 @@ public class Player : MonoBehaviour {
 	}
 
 	public void switchBackground(){
-		if (veganBackground.transform.position.x == 0.0f) {
-			meatBackground.transform.position = new Vector3 (0.0f, -1.17f, 0.0f);
-			veganBackground.transform.position = new Vector3 (-15.0f, -1.17f, 0.0f);
+
+		clearObstacle ();
+		if (veganBackground.activeSelf) {
+			meatBackground.SetActive (true);
+			veganBackground.SetActive (false);
+
 		} else {
-			veganBackground.transform.position = new Vector3 (0.0f, -1.17f, 0.0f);
-			meatBackground.transform.position = new Vector3 (-15.0f, -1.17f, 0.0f);;
-		}
+			veganBackground.SetActive (true);
+			meatBackground.SetActive (false);
+
+			}
+	}
+
+	private void clearObstacle()
+	{
+		//Bug not all items clear , not sure why at the moment.
+		GameObject[] meatArray = GameObject.FindGameObjectsWithTag ("Meat"); 
+		GameObject[] vegArray  = GameObject.FindGameObjectsWithTag("Veggie");
+		GameObject[] mushArray = GameObject.FindGameObjectsWithTag("Mushroom");
+
+		Instantiate(fader, fader.transform.position, fader.transform.rotation);
+
+		foreach(GameObject go in meatArray)
+			Destroy(go);
+		foreach (GameObject go in vegArray)
+			Destroy (go);
+		foreach (GameObject go in mushArray)
+			Destroy (go);
 	}
 }
