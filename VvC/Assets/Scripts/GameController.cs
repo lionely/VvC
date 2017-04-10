@@ -68,6 +68,8 @@ public class GameController : MonoBehaviour {
 
 		if (life <= 0) {
 			died = true;
+			player.DestroyPlayer();
+			SceneManager.LoadScene ("GameOver", LoadSceneMode.Single);
 		}
 	}
 
@@ -117,7 +119,7 @@ public class GameController : MonoBehaviour {
 	//		Destroy(player.GetComponent<BoxCollider2D> ());
 	//	}
 
-	IEnumerator explode(){
+	IEnumerator explode() {
 		yield return new WaitForSeconds (1f);
 		//rb.velocity = new Vector2(0.0f, 0.0f);
 		paused = true;
