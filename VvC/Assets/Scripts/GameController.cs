@@ -15,12 +15,12 @@ public class GameController : MonoBehaviour {
 	public float speed;
 	private float acceleration;
 	public static int score;
+	private static int scoreSinceHit;
 	private int life;
 	public bool paused;
 
-	private static float INITIAL_SPEED = -4.0f;
-	private static float INITIAL_ACCELERATION = 0.01f;
-	private static float ACCELERATION_DECAY = 0.9999f;
+	private static float SPEED_FACTOR = -2.0f;
+	private static float BASE_SPEED = -4.0f;
 
 	// Use this for initialization
 	void Awake () {
@@ -32,26 +32,28 @@ public class GameController : MonoBehaviour {
 
 		paused = false;
 		score = 0;
+		scoreSinceHit = 0;
 		life = 3;
 
-		speed = INITIAL_SPEED;
-		acceleration = INITIAL_ACCELERATION;
+		speed = BASE_SPEED;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		speed = speed - acceleration;
-		acceleration = acceleration * ACCELERATION_DECAY;
+		speed = BASE_SPEED + Mathf.Log (scoreSinceHit + 1) * SPEED_FACTOR;
 	}
 
 	public void AddScore () {
 		score += 1;
+		scoreSinceHit += 1;
 		scoreText.text = "Score: " + score;
 	}
 
 	public void LoseLife () {
 		life -= 1;
 		lifeText.text = "Life: " + life;
+
+		scoreSinceHit = 0;
 
 		// Shakes camera
 		camShake.Shake(0.2f,0.5f);
