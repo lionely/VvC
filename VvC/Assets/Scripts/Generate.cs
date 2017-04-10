@@ -18,7 +18,7 @@ public class Generate : MonoBehaviour {
 	private int chanceVM; // if 0 make meat, else veggie
 
 	// Determines the relationship of GameController speed to Obstacle generation rate; higher = faster
-	private float OBSTACLE_GENERATION_CONSTANT = 0.01f;
+	private float OBSTACLE_GENERATION_CONSTANT = 0.0075f;
 
 	// Same as above, for Decorations
 	private float DECORATION_GENERATION_CONSTANT = 0.005f;
