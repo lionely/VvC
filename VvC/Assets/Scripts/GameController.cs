@@ -46,9 +46,12 @@ public class GameController : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		speed = BASE_SPEED + Mathf.Log (scoreSinceHit + 1) * SPEED_FACTOR;
-
+		if (!paused) {
+			speed = BASE_SPEED + Mathf.Log (scoreSinceHit + 1) * SPEED_FACTOR;
+		}
 		if (died) {
+			paused = true;
+			speed = 0;
 			StartCoroutine(explode());
 		}
 	}
@@ -74,10 +77,10 @@ public class GameController : MonoBehaviour {
 
 	public void LoseLifeEffects () {
 		// Pauses objects and decorations for 1 sec
-		StartCoroutine(FreezeAndResume(1f));
+		StartCoroutine(FreezeAndResume(1.0f));
 
 		// Shakes camera (magnitude, duration)
-		camShake.Shake(0.1f, 0.6f);
+		camShake.Shake(0.1f, 0.5f);
 	}
 
 	IEnumerator FreezeAndResume (float waitTime) {
@@ -110,18 +113,10 @@ public class GameController : MonoBehaviour {
 		}
 	}
 
-	//	public void death(){
-	//		rb.velocity = new Vector2(0.0f, 3.0f);
-	//		Destroy(player.GetComponent<BoxCollider2D> ());
-	//	}
-
 	IEnumerator explode(){
-		yield return new WaitForSeconds (1f);
-		//rb.velocity = new Vector2(0.0f, 0.0f);
-		paused = true;
-		speed = 0;
-		player.GetComponent<TouchMovement>().enabled = false;
+		yield return new WaitForSeconds (1.0f);
 
+		player.GetComponent<TouchMovement>().enabled = false;
 		Destroy(player.gameObject);	
 
 		Instantiate (deathExplosion, new Vector3(rb.position.x, rb.position.y, 0), Quaternion.Euler(0, 0, 0));
