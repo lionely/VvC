@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Decoration : MonoBehaviour {
 
-	private int START_Y = 9; // Should be the top of the screen
+	private float START_Y = 7.0f; // Below the navigation bar
 	private float LEFTLANE_X = -4.5f;
 	private float RIGHTLANE_X = 4.5f;
 	private Rigidbody2D rigi;
@@ -30,8 +30,6 @@ public class Decoration : MonoBehaviour {
 	void Start () {
 		index = Random.Range (0, 2);
 		transform.position = new Vector2 (decorationPosX [index], START_Y);
-
-
 	}
 
 	// Called once per frame

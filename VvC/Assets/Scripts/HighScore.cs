@@ -54,10 +54,14 @@ public class HighScore : MonoBehaviour {
 	{
 		if (!GameOver.highScore.Equals (null)) 
 		{
-			highScoreText.text = "Highest Score:" + " "  + PlayerPrefs.GetInt ("HighScore");
+			highScoreText.text = "Best Score:" + " "  + PlayerPrefs.GetInt ("HighScore");
 		}
 	}
 
+	public void backToMenu()
+	{
+		SceneManager.LoadScene ("MainMenu", LoadSceneMode.Single);
+	}
 
 
 }

@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine.SceneManagement;
 
 public class Loading : MonoBehaviour {
-
+	//Sourced from Holistic Mobile Game development
 	public static string levelToLoad;
 	public Texture2D theTexture;
 	
@@ -38,6 +38,7 @@ public class Loading : MonoBehaviour {
 
 	        fade = 1;
 	        time = 20;
+
 			SceneManager.LoadScene (levelToLoad);//loads scenes
 	        
 

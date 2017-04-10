@@ -7,7 +7,7 @@ public class Obstacle : MonoBehaviour {
 	 * Causes the Obstacles (i.e. the veggies and the meat) to scroll down
 	 */
 
-	private int START_Y = 9; // Should be the top of the screen
+	private float START_Y = 7.0f; // Below the navigation bar
 	private float LEFTLANE_X = -2.25f;
 	private float MIDLANE_X = 0.0f;
 	private float RIGHTLANE_X = 2.25f;
@@ -16,8 +16,6 @@ public class Obstacle : MonoBehaviour {
 	private float downward_speed;
 	public float[] foodPosX;
 	private int index;
-
-
 
 	// Called when the obstacle is generated
 	private void Awake(){
@@ -34,9 +32,7 @@ public class Obstacle : MonoBehaviour {
 	// Use this for initialization of an Obstacle
 	void Start () {
 		index = Random.Range (0, 3);
-		transform.position = new Vector2 (foodPosX [index], START_Y); // Decided to put foods at y = 9.
-
-
+		transform.position = new Vector2 (foodPosX [index], START_Y);
 	}
 
 	// Called once per frame
