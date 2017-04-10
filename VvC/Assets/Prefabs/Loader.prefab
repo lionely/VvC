@@ -8,7 +8,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 400000}
-  - component: {fileID: 114841088849847234}
+  - component: {fileID: 114429886022097188}
   m_Layer: 0
   m_Name: Loader
   m_TagString: Untagged
@@ -40,7 +40,7 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100000}
   m_IsPrefabParent: 1
---- !u!114 &114841088849847234
+--- !u!114 &114429886022097188
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -51,4 +51,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c898db64cb214ef6ba15b7306f769d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  theTexture: {fileID: 2800000, guid: 1bac494f1157f4f8e8f0b8cfe3347dee, type: 3}
+  theTexture: {fileID: 2800000, guid: 30ac28680dc404db382f3072e6fcda4b, type: 3}
