@@ -14,17 +14,16 @@ public class GameController : MonoBehaviour {
 	Rigidbody2D rb;
 
 	public static int score;
-	private static int scoreSinceHit;
+	private int scoreSinceHit;
 	private int life;
 
 	public bool paused;
 	private bool died;
 
 	public float speed;
-	private float acceleration;
 
-	private static float SPEED_FACTOR = -2.0f;
 	private static float BASE_SPEED = -4.0f;
+	private static float SPEED_FACTOR = -2.0f;
 
 	public GameObject deathExplosion;
 
@@ -40,15 +39,18 @@ public class GameController : MonoBehaviour {
 		paused = false;
 		died = false;
 		score = 0;
-		scoreSinceHit = 0;
 		life = 3;
-
 		speed = BASE_SPEED;
+		scoreSinceHit = 0;
 	}
 
 	// Update is called once per frame
 	void Update () {
 		speed = BASE_SPEED + Mathf.Log (scoreSinceHit + 1) * SPEED_FACTOR;
+
+		if (died) {
+			StartCoroutine(explode());
+		}
 	}
 
 	public void AddScore () {
@@ -60,7 +62,6 @@ public class GameController : MonoBehaviour {
 	public void LoseLife () {
 		life -= 1;
 		lifeText.text = "Life: " + life;
-
 		scoreSinceHit = 0;
 
 		// Juice Effects
@@ -68,8 +69,6 @@ public class GameController : MonoBehaviour {
 
 		if (life <= 0) {
 			died = true;
-			player.DestroyPlayer();
-			SceneManager.LoadScene ("GameOver", LoadSceneMode.Single);
 		}
 	}
 
@@ -79,9 +78,6 @@ public class GameController : MonoBehaviour {
 
 		// Shakes camera (magnitude, duration)
 		camShake.Shake(0.1f, 0.6f);
-
-		// slow down by 20%
-		speed *= 0.8f;
 	}
 
 	IEnumerator FreezeAndResume (float waitTime) {
@@ -119,7 +115,7 @@ public class GameController : MonoBehaviour {
 	//		Destroy(player.GetComponent<BoxCollider2D> ());
 	//	}
 
-	IEnumerator explode() {
+	IEnumerator explode(){
 		yield return new WaitForSeconds (1f);
 		//rb.velocity = new Vector2(0.0f, 0.0f);
 		paused = true;
