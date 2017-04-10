@@ -13,19 +13,20 @@ public class GameController : MonoBehaviour {
 	Text buttonText;
 	Rigidbody2D rb;
 
-	public float speed;
-	private float acceleration;
 	public static int score;
 	private int life;
+
 	public bool paused;
-	private bool exploded = false;
+	private bool died;
+
+	public float speed;
+	private float acceleration;
 
 	private static float INITIAL_SPEED = -4.0f;
 	private static float INITIAL_ACCELERATION = 0.01f;
 	private static float ACCELERATION_DECAY = 0.9999f;
 
 	public GameObject deathExplosion;
-//	public AudioClip explosionSound;
 
 	// Use this for initialization
 	void Awake () {
@@ -37,20 +38,22 @@ public class GameController : MonoBehaviour {
 		buttonText = GameObject.Find("PauseButtonText").GetComponent<Text> ();
 
 		paused = false;
+		died = false;
 		score = 0;
 		life = 3;
-
 		speed = INITIAL_SPEED;
 		acceleration = INITIAL_ACCELERATION;
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
-		speed = speed - acceleration;
-		acceleration = acceleration * ACCELERATION_DECAY;
+		if (!paused) {
+			speed = speed - acceleration;
+			acceleration = acceleration * ACCELERATION_DECAY;
+		}
 
-		if (exploded == false) {
-			explode ();
+		if (died) {
+			StartCoroutine(explode());
 		}
 	}
 
@@ -63,17 +66,36 @@ public class GameController : MonoBehaviour {
 		life -= 1;
 		lifeText.text = "Life: " + life;
 
-		// Shakes camera
-		camShake.Shake(0.2f,0.5f);
-
-		// Slow Down by 20%
-		speed = speed * 0.8f;
+		// Juice Effects
+		LoseLifeEffects();
 
 		if (life <= 0) {
-			//player.DestroyPlayer();
-			//SceneManager.LoadScene ("GameOver",LoadSceneMode.Single);
-			death();
+			died = true;
 		}
+	}
+
+	public void LoseLifeEffects () {
+		// Pauses objects and decorations for 1 sec
+		StartCoroutine(FreezeAndResume(1f));
+
+		// Shakes camera (magnitude, duration)
+		camShake.Shake(0.1f, 0.6f);
+
+		// slow down by 20%
+		speed *= 0.8f;
+	}
+
+	IEnumerator FreezeAndResume (float waitTime) {
+		paused = true;
+		player.GetComponent<TouchMovement>().enabled = false;
+
+		float previousSpeed = speed;
+		speed = 0; // pauses scrolling
+		yield return new WaitForSeconds (waitTime);
+		speed = previousSpeed;
+
+		paused = false;
+		player.GetComponent<TouchMovement>().enabled = true;
 	}
 
 	public void Pause () {
@@ -83,31 +105,32 @@ public class GameController : MonoBehaviour {
 		if (paused) {
 			Time.timeScale = 0;
 			buttonText.text = "Resume";
-			player.enabled = false;
+			player.GetComponent<TouchMovement>().enabled = false;
 		}
 
 		else if (!paused) {
 			Time.timeScale = 1;
 			buttonText.text = "Pause";
-			player.enabled = true;
+			player.GetComponent<TouchMovement>().enabled = true;
 		}
 	}
 
-	public void death(){
-		rb.velocity = new Vector2(0.0f, 3.0f);
-		Destroy(player.GetComponent<BoxCollider2D> ());
-	}
+	//	public void death(){
+	//		rb.velocity = new Vector2(0.0f, 3.0f);
+	//		Destroy(player.GetComponent<BoxCollider2D> ());
+	//	}
 
-	public void explode(){
-		if (life <= 0 && rb.position.y >= 0.0f) {
-			rb.velocity = new Vector2 (0.0f, 0.0f);
-			Destroy (player.GetComponent<TouchMovement> ());
-			Destroy (GameObject.Find ("FoodItems").GetComponent<Generate> ());
-			Destroy (player.gameObject);	
-			Instantiate (deathExplosion, new Vector3(rb.position.x, rb.position.y, 0), Quaternion.Euler(0, 0, 0));
-			exploded = true;
-			Invoke("LoadGameOver", 4);
-		}
+	IEnumerator explode(){
+		yield return new WaitForSeconds (1f);
+		//rb.velocity = new Vector2(0.0f, 0.0f);
+		paused = true;
+		speed = 0;
+		player.GetComponent<TouchMovement>().enabled = false;
+
+		Destroy(player.gameObject);	
+
+		Instantiate (deathExplosion, new Vector3(rb.position.x, rb.position.y, 0), Quaternion.Euler(0, 0, 0));
+		Invoke("LoadGameOver", 2);
 	}
 
 	public void LoadGameOver(){

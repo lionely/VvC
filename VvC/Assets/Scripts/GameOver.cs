@@ -45,7 +45,7 @@ public class GameOver : MonoBehaviour {
 
 		print (highScore);
 		print (score);
-		ScoreText.text = "Highest Score:" + " "  + highScore + '\n' + " " + '\n'
+		ScoreText.text = "Best:" + " "  + highScore + '\n' + " " + '\n'
 			+ "Score:" + " " + score;
 	}
 
