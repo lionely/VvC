@@ -16,6 +16,7 @@ public class Generate : MonoBehaviour {
 
 	private int index;
 	private int chanceVM; // if 0 make meat, else veggie
+	private int foodInARow = 0; //Keeps track of multiple types of food spawning in a row
 
 	// Determines the relationship of GameController speed to Obstacle generation rate; higher = faster
 	private float OBSTACLE_GENERATION_CONSTANT = 0.006f;
@@ -59,16 +60,30 @@ public class Generate : MonoBehaviour {
 
 
 	void CreateObstacle(){
-		//print (chanceVM);
 		// 45.5% Veggie
 		if (chanceVM >= 0 && chanceVM <= 4) {
-			Instantiate (veggie [index]);
+			//Checks if two veggies have been spawned in a row to avoid impossible situations.
+			if (foodInARow == -2) {
+				Instantiate (meat [index]);
+				foodInARow = 1;
+			} else {
+				Instantiate (veggie [index]);
+				foodInARow -= 1;
+			}
 			// 45.5% Meat
 		}  else if (chanceVM >= 5 && chanceVM <= 9) {
-			Instantiate (meat [index]);
+			//Checks if two meat have been spawned in a row to avoid impossible situations.
+			if (foodInARow == 2) {
+				Instantiate (veggie [index]);
+				foodInARow = -1;
+			} else {
+				Instantiate (meat [index]);
+				foodInARow += 1;
+			}
 			// 9% Mushroom
 		}  else {
 			Instantiate (mushroom [0]);
+			foodInARow = 0;
 		}
 	}
 
