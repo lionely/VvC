@@ -19,7 +19,7 @@ public class TouchMovement : MonoBehaviour {
 			{
 				Vector3 touchPos = Camera.main.ScreenToWorldPoint(new Vector3(t.position.x, t.position.y, 0));          
 				//touch left
-				if (touchPos.x < player.position.x && pos != -1) 
+				if (touchPos.x < player.position.x && touchPos.y < 6.5 && pos != -1) 
 				{ 
 					this.transform.position = new Vector3 (player.transform.position.x - 2.25f, 
 						player.transform.position.y, -1);
@@ -27,7 +27,7 @@ public class TouchMovement : MonoBehaviour {
 				} 
 
 				//touch right
-				else if (touchPos.x > player.position.x && pos != 1) 
+				else if (touchPos.x > player.position.x && touchPos.y < 6.5 && pos != 1) 
 				{ 
 					this.transform.position = new Vector3 (player.transform.position.x + 2.25f, 
 						player.transform.position.y, -1);
