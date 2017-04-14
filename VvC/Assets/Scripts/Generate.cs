@@ -68,7 +68,12 @@ public class Generate : MonoBehaviour {
 				foodInARow = 1;
 			} else {
 				Instantiate (veggie [index]);
-				foodInARow -= 1;
+				if (foodInARow > 0) {
+					foodInARow = -1;
+				}
+				else{
+					foodInARow -= 1;
+				}
 			}
 			// 45.5% Meat
 		}  else if (chanceVM >= 5 && chanceVM <= 9) {
@@ -78,7 +83,12 @@ public class Generate : MonoBehaviour {
 				foodInARow = -1;
 			} else {
 				Instantiate (meat [index]);
-				foodInARow += 1;
+				if (foodInARow < 0) {
+					foodInARow = 1;
+				}
+				else{
+					foodInARow += 1;
+				}
 			}
 			// 9% Mushroom
 		}  else {
