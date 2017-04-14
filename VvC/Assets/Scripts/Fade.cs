@@ -7,7 +7,7 @@ public class Fade : MonoBehaviour {
 	public Texture2D theTexture;
 
 	float fade = 1f;
-	float fadeInTime = 1f;
+	float fadeInTime = 0.01f;// time it takes to become black
 
 
 	void Awake()
@@ -41,7 +41,7 @@ public class Fade : MonoBehaviour {
 			time = 20;
 
 
-			yield return new WaitForSeconds(0.1f);
+			yield return new WaitForSeconds(0.3f);//time to wait before fading Out
 
 			while (time < (20 + fadeInTime))
 			{

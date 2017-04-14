@@ -28,7 +28,7 @@ public class MainMenu : MonoBehaviour {
 	 */
 	public void HighScore()
 	{
-		print ("Loads highscore");
+		
 		Instantiate(levelLoader, levelLoader.transform.position, levelLoader.transform.rotation);
 		Loading.levelToLoad = "HighScore";
 		//SceneManager.LoadScene ("HighScore",LoadSceneMode.Single);//loads scenes

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class DestroyOffScreen : MonoBehaviour {
+	 
+	//TODO need to destroy all objects off screen, or  game will slow down.
 
 	// Use this for initialization
 	void Start () {
@@ -15,9 +17,7 @@ public class DestroyOffScreen : MonoBehaviour {
 	}
 
 	void OnCollisionEnter2D(Collision2D col) {
-		if (col.gameObject.tag == "Vege"  || col.gameObject.tag == "Meat") {
-			//print ("Should be destroyed.");
 			Destroy(col.gameObject,.5f);
-		}
+
 	}
 }

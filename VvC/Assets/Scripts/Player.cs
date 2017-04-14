@@ -55,7 +55,7 @@ public class Player : MonoBehaviour {
 			}
 			else { // Mushroom 
 				Destroy(col.gameObject,.1f);
-				switchBackground() ;
+				switchBackground ();
 				Vegan = !Vegan;
 				animator.SetTrigger ("toCarnivore");
 			}
@@ -85,8 +85,7 @@ public class Player : MonoBehaviour {
 	}
 
 	public void switchBackground(){
-
-		clearObstacle ();
+		
 		if (veganBackground.activeSelf) {
 			meatBackground.SetActive (true);
 			veganBackground.SetActive (false);
@@ -100,12 +99,12 @@ public class Player : MonoBehaviour {
 
 	private void clearObstacle()
 	{
+		Instantiate(fader, fader.transform.position, fader.transform.rotation);
+
 		//Bug not all items clear , not sure why at the moment.
 		GameObject[] meatArray = GameObject.FindGameObjectsWithTag ("Meat"); 
 		GameObject[] vegArray  = GameObject.FindGameObjectsWithTag("Veggie");
 		GameObject[] mushArray = GameObject.FindGameObjectsWithTag("Mushroom");
-
-		Instantiate(fader, fader.transform.position, fader.transform.rotation);
 
 		foreach(GameObject go in meatArray)
 			Destroy(go);
@@ -114,4 +113,6 @@ public class Player : MonoBehaviour {
 		foreach (GameObject go in mushArray)
 			Destroy (go);
 	}
+
+
 }

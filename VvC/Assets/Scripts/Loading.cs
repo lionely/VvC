@@ -12,13 +12,23 @@ public class Loading : MonoBehaviour {
 	
 	void Awake()
 	{
-	    DontDestroyOnLoad(this.gameObject);
+	    //DontDestroyOnLoad(this.gameObject);
+
+//		if (FindObjectsOfType(GetType()).Length > 1)
+//		{
+//			Destroy(gameObject);
+//		}
+
+		StopCoroutine("FadeInCoroutine");
+		StartCoroutine("FadeInCoroutine");
+		//print ("Loading awake");
 	}
 	
 	void Start()
 	{
-	    StopCoroutine("FadeInCoroutine");
-	    StartCoroutine("FadeInCoroutine");
+//	    StopCoroutine("FadeInCoroutine");
+//	    StartCoroutine("FadeInCoroutine");
+		//print ("Loading start coroutine");
 	}
 	
 	//Fades inbetween screens.
@@ -40,7 +50,7 @@ public class Loading : MonoBehaviour {
 	        time = 20;
 
 			SceneManager.LoadScene (levelToLoad);//loads scenes
-	        
+			//print("Loaded gameplay");
 
 	    	//yield return async;
 	
@@ -53,13 +63,15 @@ public class Loading : MonoBehaviour {
 
 	        fade = 0;
 			Destroy(this.gameObject);
+			//print ("Loading was destroyed");
 	    }
 	}
 
 
 	void OnGUI()
 	{
-    		GUI.depth = 0;
+
+			GUI.depth = 0;
     		if (fade > 0)
     		{
         		Color c = Color.white;

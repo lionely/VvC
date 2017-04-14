@@ -28,10 +28,14 @@ public class Generate : MonoBehaviour {
 	private float timeTillObstacle;
 	private float timeTillDecoration;
 
+
+
+
 	// Use this for initialization
 	void Start () {
 		gc = FindObjectOfType<GameController> ();
-		player = GameObject.Find("Player").GetComponent<Player> ();
+		//player = GameObject.Find("Player").GetComponent<Player> ();
+
 	}
 
 	// Update is called once per frame
@@ -99,7 +103,7 @@ public class Generate : MonoBehaviour {
 
 	//Creates different decorations randomly.
 	void CreateDecoration(){
-		int i = Random.Range (0, 3);
+		
 		if (Player.Vegan) {
 			Instantiate (decorationVeggie [index]);
 		}  else {
@@ -107,5 +111,6 @@ public class Generate : MonoBehaviour {
 		}
 
 	}
+
 
 }

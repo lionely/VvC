@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class HighScore : MonoBehaviour {
 
 	Scene scene;
-	string PreviousScene = "";
+
 
 	Text highScoreText;
 
@@ -22,32 +22,14 @@ public class HighScore : MonoBehaviour {
 		setHighScore ();
 
 		scene = SceneManager.GetActiveScene ();// used to go back to MainMenu
-		PreviousScene = scene.name;
+
 	}
 	
 	// Update is called once per frame
 	void Update () 
 		{
-		keyLogic ();
 		setHighScore ();
 		}
-
-
-
-	/**
-	 * This method has button logic for phones, for home and back button.
-	 */
-	private void keyLogic()
-	{
-		if (Input.GetKey (KeyCode.Home)) {
-			//Home button pressed! write every thing you want to do
-			Application.Quit ();
-		}
-
-		if (Input.GetKey (KeyCode.Escape)) {// load previous scene
-			SceneManager.LoadScene ("MainMenu", LoadSceneMode.Single);
-		}
-	}
 
 
 	private void setHighScore()

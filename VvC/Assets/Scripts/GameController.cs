@@ -26,24 +26,28 @@ public class GameController : MonoBehaviour {
 	private static float SPEED_FACTOR = -2.0f;
 
 	public GameObject deathExplosion;
+	private GameObject backButton;
 
 	// Use this for initialization
 	void Awake () {
+
 		player = GameObject.Find("Player").GetComponent<Player> ();
 		rb = player.GetComponent<Rigidbody2D> ();
 		camShake = GameObject.Find("MainCamera").GetComponent<ShakeCamera> ();
 		scoreText = GameObject.Find("ScoreText").GetComponent<Text> ();
 		lifeText = GameObject.Find("LifeText").GetComponent<Text> ();
 		buttonText = GameObject.Find("PauseButtonText").GetComponent<Text> ();
-
+		backButton = GameObject.Find ("backToMenu");
+		backButton.SetActive (false);
 		paused = false;
 		died = false;
 		score = 0;
 		life = 3;
 		speed = BASE_SPEED;
 		scoreSinceHit = 0;
-	}
 
+	}
+		
 	// Update is called once per frame
 	void Update () {
 		if (!paused) {
@@ -104,12 +108,14 @@ public class GameController : MonoBehaviour {
 			Time.timeScale = 0;
 			buttonText.text = "Resume";
 			player.GetComponent<TouchMovement>().enabled = false;
+			backButton.SetActive (true);
 		}
 
 		else if (!paused) {
-			Time.timeScale = 1;
+			Time.timeScale = 1; // remember this freezes/unfreezes everything
 			buttonText.text = "Pause";
 			player.GetComponent<TouchMovement>().enabled = true;
+			backButton.SetActive (false);
 		}
 	}
 
@@ -117,13 +123,20 @@ public class GameController : MonoBehaviour {
 		yield return new WaitForSeconds (1.0f);
 
 		player.GetComponent<TouchMovement>().enabled = false;
-		Destroy(player.gameObject);	
-
+		//Destroy(player.gameObject);	
+		player.gameObject.SetActive(false);// works a bit better because we don't get the error of not referencing 
+		//something that is not there.
 		Instantiate (deathExplosion, new Vector3(rb.position.x, rb.position.y, 0), Quaternion.Euler(0, 0, 0));
 		Invoke("LoadGameOver", 2);
 	}
 
 	public void LoadGameOver(){
 		SceneManager.LoadScene ("GameOver",LoadSceneMode.Single);
+	}
+
+	public void backToMain()
+	{
+		Time.timeScale = 1;//in case we were paused.
+		SceneManager.LoadScene ("MainMenu",LoadSceneMode.Single);
 	}
 }
