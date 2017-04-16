@@ -45,7 +45,6 @@ public class GameController : MonoBehaviour {
 		life = 3;
 		speed = BASE_SPEED;
 		scoreSinceHit = 0;
-
 	}
 		
 	// Update is called once per frame
@@ -138,5 +137,9 @@ public class GameController : MonoBehaviour {
 	{
 		Time.timeScale = 1;//in case we were paused.
 		SceneManager.LoadScene ("MainMenu",LoadSceneMode.Single);
+	}
+
+	public void mushroomFreeze(){
+		StartCoroutine (FreezeAndResume(4.0f));
 	}
 }
