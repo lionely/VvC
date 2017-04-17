@@ -20,6 +20,8 @@ public class GameController : MonoBehaviour {
 	public bool paused;
 	private bool died;
 
+	private AudioSource source;
+
 	public float speed;
 
 	private static float BASE_SPEED = -4.0f;
@@ -45,6 +47,8 @@ public class GameController : MonoBehaviour {
 		life = 3;
 		speed = BASE_SPEED;
 		scoreSinceHit = 0;
+
+		source = GetComponent<AudioSource> ();
 	}
 		
 	// Update is called once per frame
@@ -63,6 +67,8 @@ public class GameController : MonoBehaviour {
 		score += 1;
 		scoreSinceHit += 1;
 		scoreText.text = "Score: " + score;
+		source.pitch = Random.Range (0.8f, 1.2f);
+		source.Play ();
 	}
 
 	public void LoseLife () {
