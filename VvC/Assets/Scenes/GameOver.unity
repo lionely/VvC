@@ -238,7 +238,6 @@ GameObject:
   - component: {fileID: 240038373}
   - component: {fileID: 240038372}
   - component: {fileID: 240038371}
-  - component: {fileID: 240038370}
   m_Layer: 0
   m_Name: bg
   m_TagString: Untagged
@@ -246,18 +245,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &240038370
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 240038369}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52fc75a6430e44304b5d5dfd039c7685, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  uvSpeed: {x: 0, y: 0.1}
 --- !u!23 &240038371
 MeshRenderer:
   m_ObjectHideFlags: 0

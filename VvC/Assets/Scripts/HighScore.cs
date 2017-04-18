@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class HighScore : MonoBehaviour {
 
-	Scene scene;
+
 
 
 	Text highScoreText;
@@ -14,15 +14,13 @@ public class HighScore : MonoBehaviour {
 	void Awake()
 	{
 		highScoreText = GameObject.Find("highScore").GetComponent<Text>(); 
+
 	}
 
 	// Use this for initialization
 	void Start () 
 	{
 		setHighScore ();
-
-		scene = SceneManager.GetActiveScene ();// used to go back to MainMenu
-
 	}
 	
 	// Update is called once per frame
@@ -34,9 +32,11 @@ public class HighScore : MonoBehaviour {
 
 	private void setHighScore()
 	{
-		if (!GameOver.highScore.Equals (null)) 
+		if (!GameOver.highScore.Equals (null)) {
+			highScoreText.text = "Best Score:" + " " + PlayerPrefs.GetInt ("HighScore");
+		} else 
 		{
-			highScoreText.text = "Best Score:" + " "  + PlayerPrefs.GetInt ("HighScore");
+			highScoreText.text = "Best Score:" + " " + '0';
 		}
 	}
 
@@ -44,6 +44,7 @@ public class HighScore : MonoBehaviour {
 	{
 		SceneManager.LoadScene ("MainMenu", LoadSceneMode.Single);
 	}
+
 
 
 }
