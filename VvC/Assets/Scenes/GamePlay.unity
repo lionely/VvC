@@ -1090,6 +1090,10 @@ MonoBehaviour:
   paused: 1
   speed: 0
   deathExplosion: {fileID: 139366, guid: b185c1a9cf067374586d095111b15bd1, type: 2}
+  sound:
+  - {fileID: 8300000, guid: 8e9625806f7094671ab8c6bf115c3568, type: 3}
+  - {fileID: 8300000, guid: c9e76be38c33b455ea24b2c489089eff, type: 3}
+  - {fileID: 8300000, guid: fd424928826b0455ea9cafedc56a9aa4, type: 3}
 --- !u!4 &955103205
 Transform:
   m_ObjectHideFlags: 0
@@ -1304,7 +1308,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 67abf3426a8214359be0a06489902530, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 303f6f34c61234b89b433629de1b115a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

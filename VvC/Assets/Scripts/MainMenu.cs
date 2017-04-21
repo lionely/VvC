@@ -10,6 +10,7 @@ public class MainMenu : MonoBehaviour {
 	public GameObject levelLoader;
 	Button carn;
 	Button vegan;
+	Image vs;
 	float amplitudeX = 10.0f;
 	float amplitudeY = 5.0f;
 	float omegaX = 1.0f;
@@ -19,10 +20,14 @@ public class MainMenu : MonoBehaviour {
 
 	void Start()
 	{
+		
 		carn = GameObject.Find ("Carn").GetComponent<Button> ();
 		vegan = GameObject.Find ("Vegan").GetComponent<Button> ();
+		vs = GameObject.Find ("Vs Logo").GetComponent<Image> ();
+		//vs.transform.position = new Vector3 (0, 0, z);
 
 		PlayerPrefs.GetInt ("HighScore");// loads the highscore from memory
+
 
 	}
 
@@ -30,6 +35,7 @@ public class MainMenu : MonoBehaviour {
 	void Update()
 	{
 		buttonJiggle ();
+		vsEffect ();
 		//StartCoroutine("buttonJiggle");
 	}
 
@@ -70,8 +76,14 @@ public class MainMenu : MonoBehaviour {
 
 		carn.transform.localPosition = new Vector3(cX,y,0);
 		vegan.transform.localPosition = new Vector3 (vX, -y, 0);
+	}
 
-
+	void vsEffect()
+	{	
+		Color c = vs.color;
+		print (c.a);
+		c.a = 0;
+		vs.color = c;
 	}
 
 
