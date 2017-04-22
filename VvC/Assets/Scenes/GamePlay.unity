@@ -1106,7 +1106,7 @@ MonoBehaviour:
   pauseText: {fileID: 1064562711}
   backButton: {fileID: 1208978956}
   deathExplosion: {fileID: 139366, guid: b185c1a9cf067374586d095111b15bd1, type: 2}
-  goodParticle: {fileID: 1228729499083964, guid: 83e8d6f6660074621a05e9375f9025eb,
+  goodParticle: {fileID: 1688608666086824, guid: 610bb27b3a963431ab449f06db8b5dad,
     type: 2}
   badParticle: {fileID: 1347071919777640, guid: 9787d5da58eba44269cd38184536c2de,
     type: 2}

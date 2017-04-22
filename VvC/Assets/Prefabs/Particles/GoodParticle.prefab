@@ -9,18 +9,18 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1228729499083964}
+  m_RootGameObject: {fileID: 1465556065684624}
   m_IsPrefabParent: 1
---- !u!1 &1228729499083964
+--- !u!1 &1465556065684624
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4077642919699314}
-  - component: {fileID: 198048478980265670}
-  - component: {fileID: 199781593437856904}
+  - component: {fileID: 4719580644664610}
+  - component: {fileID: 198469171159105814}
+  - component: {fileID: 199578838245294004}
   m_Layer: 0
   m_Name: GoodParticle
   m_TagString: Untagged
@@ -28,12 +28,12 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4077642919699314
+--- !u!4 &4719580644664610
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1228729499083964}
+  m_GameObject: {fileID: 1465556065684624}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: -6.5, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -41,12 +41,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
---- !u!198 &198048478980265670
+--- !u!198 &198469171159105814
 ParticleSystem:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1228729499083964}
+  m_GameObject: {fileID: 1465556065684624}
   serializedVersion: 5
   lengthInSec: 1
   simulationSpeed: 1
@@ -96,7 +96,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 45996191
+  randomSeed: -409811540
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -551,13 +551,13 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 3
     enabled: 1
-    type: 5
+    type: 15
     radius: 0.5
     angle: 25
     length: 5
-    boxX: 2
-    boxY: 0
-    boxZ: 1.5
+    boxX: 1.7
+    boxY: 1.7
+    boxZ: 1
     arc: 360
     placementMode: 0
     m_Mesh: {fileID: 0}
@@ -680,9 +680,9 @@ ParticleSystem:
           tangentMode: 0
         - serializedVersion: 2
           time: 1
-          value: 0.5
-          inSlope: -1.1522701
-          outSlope: -1.1522701
+          value: 0
+          inSlope: -2
+          outSlope: -2
           tangentMode: 0
         m_PreInfinity: 2
         m_PostInfinity: 2
@@ -2654,13 +2654,13 @@ ParticleSystem:
       minColor: {r: 1, g: 1, b: 1, a: 1}
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       minMaxState: 0
---- !u!199 &199781593437856904
+--- !u!199 &199578838245294004
 ParticleSystemRenderer:
   serializedVersion: 2
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1228729499083964}
+  m_GameObject: {fileID: 1465556065684624}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0

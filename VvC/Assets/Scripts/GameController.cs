@@ -67,7 +67,7 @@ public class GameController : MonoBehaviour {
 		scoreText.text = "Score: " + score;
 
 		// Good Particles
-		Instantiate(goodParticle, new Vector3(rb.position.x, rb.position.y+2.0f, 0), player.transform.rotation);
+		Instantiate(goodParticle, new Vector3(rb.position.x, -7.0f, rb.position.y), player.transform.rotation);
 
 		// Juice Effects
 		GainPointEffects();
@@ -94,7 +94,7 @@ public class GameController : MonoBehaviour {
 		camShake.Shake(0.1f, 0.5f);
 
 		// Bad Particles
-		Instantiate(badParticle, new Vector3(rb.position.x, rb.position.y+1.5f, 0), player.transform.rotation);
+		// Instantiate(badParticle, new Vector3(rb.position.x, -7.0f, rb.position.y), player.transform.rotation);
 	}
 
 	public void GainPointEffects () {
