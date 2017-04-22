@@ -808,7 +808,7 @@ GameObject:
   - component: {fileID: 493421917}
   - component: {fileID: 493421916}
   m_Layer: 5
-  m_Name: Text
+  m_Name: ButtonText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1100,13 +1100,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43713eada2f0842feb2afe7d288b3ff2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paused: 1
-  speed: 0
+  player: {fileID: 388122396}
+  scoreText: {fileID: 130974915}
+  lifeText: {fileID: 378224752}
+  pauseText: {fileID: 1064562711}
+  backButton: {fileID: 1208978956}
   deathExplosion: {fileID: 139366, guid: b185c1a9cf067374586d095111b15bd1, type: 2}
+  goodParticle: {fileID: 1228729499083964, guid: 83e8d6f6660074621a05e9375f9025eb,
+    type: 2}
+  badParticle: {fileID: 1347071919777640, guid: 9787d5da58eba44269cd38184536c2de,
+    type: 2}
   sound:
   - {fileID: 8300000, guid: 8e9625806f7094671ab8c6bf115c3568, type: 3}
   - {fileID: 8300000, guid: c9e76be38c33b455ea24b2c489089eff, type: 3}
   - {fileID: 8300000, guid: fd424928826b0455ea9cafedc56a9aa4, type: 3}
+  paused: 1
+  speed: 0
 --- !u!4 &955103205
 Transform:
   m_ObjectHideFlags: 0

@@ -6,12 +6,21 @@ using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour {
 
-	Player player;
+	public Player player;
+	public Text scoreText;
+	public Text lifeText;
+	public Text pauseText;
+
 	ShakeCamera camShake;
-	Text scoreText;
-	Text lifeText;
-	Text buttonText;
 	Rigidbody2D rb;
+
+	public GameObject backButton;
+	public GameObject deathExplosion;
+	public GameObject goodParticle = GameObject.Find("GoodParticle");
+	public GameObject badParticle;
+
+	public AudioClip[] sound = new AudioClip[3];
+	AudioSource audio;
 
 	public static int score;
 	private int scoreSinceHit;
@@ -25,22 +34,10 @@ public class GameController : MonoBehaviour {
 	private static float BASE_SPEED = -4.0f;
 	private static float SPEED_FACTOR = -2.0f;
 
-	public GameObject deathExplosion;
-	private GameObject backButton;
-
-	public AudioClip[] sound = new AudioClip[3];
-	AudioSource audio;
-
 	// Use this for initialization
 	void Awake () {
-
-		player = GameObject.Find("Player").GetComponent<Player> ();
 		rb = player.GetComponent<Rigidbody2D> ();
 		camShake = GameObject.Find("MainCamera").GetComponent<ShakeCamera> ();
-		scoreText = GameObject.Find("ScoreText").GetComponent<Text> ();
-		lifeText = GameObject.Find("LifeText").GetComponent<Text> ();
-		buttonText = GameObject.Find("PauseButtonText").GetComponent<Text> ();
-		backButton = GameObject.Find ("backToMenu");
 		backButton.SetActive (false);
 		paused = false;
 		died = false;
@@ -50,9 +47,6 @@ public class GameController : MonoBehaviour {
 		scoreSinceHit = 0;
 
 		audio = player.GetComponent<AudioSource> ();
-
-
-
 	}
 		
 	// Update is called once per frame
@@ -72,13 +66,11 @@ public class GameController : MonoBehaviour {
 		scoreSinceHit += 1;
 		scoreText.text = "Score: " + score;
 
-		audio.clip = sound [Random.Range (0, sound.Length)];
-		//print (audio.clip.name);
-		audio.pitch = Random.Range (0.8f, 1.2f);
-		//print (audio.pitch);
-		audio.Play ();
-		//source.pitch = Random.Range (0.8f, 1.2f);
-		//source.Play ();
+		// Good Particles
+		Instantiate(goodParticle, new Vector3(rb.position.x, rb.position.y+2.0f, 0), player.transform.rotation);
+
+		// Juice Effects
+		GainPointEffects();
 	}
 
 	public void LoseLife () {
@@ -100,6 +92,19 @@ public class GameController : MonoBehaviour {
 
 		// Shakes camera (magnitude, duration)
 		camShake.Shake(0.1f, 0.5f);
+
+		// Bad Particles
+		Instantiate(badParticle, new Vector3(rb.position.x, rb.position.y+1.5f, 0), player.transform.rotation);
+	}
+
+	public void GainPointEffects () {
+		audio.clip = sound [Random.Range (0, sound.Length)];
+		//print (audio.clip.name);
+		audio.pitch = Random.Range (0.8f, 1.2f);
+		//print (audio.pitch);
+		audio.Play ();
+		//source.pitch = Random.Range (0.8f, 1.2f);
+		//source.Play ();
 	}
 
 	IEnumerator FreezeAndResume (float waitTime) {
@@ -121,14 +126,14 @@ public class GameController : MonoBehaviour {
 
 		if (paused) {
 			Time.timeScale = 0;
-			buttonText.text = "Resume";
+			pauseText.text = "Resume";
 			player.GetComponent<TouchMovement>().enabled = false;
 			backButton.SetActive (true);
 		}
 
 		else if (!paused) {
 			Time.timeScale = 1; // remember this freezes/unfreezes everything
-			buttonText.text = "Pause";
+			pauseText.text = "Pause";
 			player.GetComponent<TouchMovement>().enabled = true;
 			backButton.SetActive (false);
 		}
@@ -156,6 +161,6 @@ public class GameController : MonoBehaviour {
 	}
 
 	public void mushroomFreeze(){
-		StartCoroutine (FreezeAndResume(4.0f));
+		StartCoroutine(FreezeAndResume(1.0f));
 	}
 }

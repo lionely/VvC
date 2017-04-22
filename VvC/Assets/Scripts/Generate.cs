@@ -28,9 +28,6 @@ public class Generate : MonoBehaviour {
 	private float timeTillObstacle;
 	private float timeTillDecoration;
 
-
-
-
 	// Use this for initialization
 	void Start () {
 		gc = FindObjectOfType<GameController> ();
@@ -96,7 +93,7 @@ public class Generate : MonoBehaviour {
 			}
 			// 9% Mushroom
 		}  else {
-			Instantiate (mushroom [0]);
+			Instantiate(mushroom[0]);
 			foodInARow = 0;
 		}
 	}

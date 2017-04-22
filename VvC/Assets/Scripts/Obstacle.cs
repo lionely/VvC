@@ -23,7 +23,7 @@ public class Obstacle : MonoBehaviour {
 		// Retrieve the active instance of GameController, which has information on the game state (e.g. speed)
 		gc = GameController.FindObjectOfType<GameController> ();
 		rigi.velocity = new Vector2(0.0f, gc.speed);
-		foodPosX     = new float[3];
+		foodPosX = new float[3];
 		foodPosX [0] = LEFTLANE_X;
 		foodPosX [1] =  MIDLANE_X;
 		foodPosX [2] = RIGHTLANE_X;

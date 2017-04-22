@@ -75,7 +75,7 @@ public class Player : MonoBehaviour {
 			else { // Mushroom
 				Destroy(col.gameObject,.1f);
 				StartCoroutine(mushroom ());
-				gameController.mushroomFreeze ();
+				gameController.mushroomFreeze();
 //				Vegan = !Vegan;
 				animator.SetTrigger ("toVegan");
 			}
@@ -101,13 +101,13 @@ public class Player : MonoBehaviour {
 
 	IEnumerator mushroom(){
 		for (float f = 1; f <= 7; f++) {
-			Invoke ("switchBackground", 1 / (f + 1.0f));
+			Invoke ("switchBackground", 1.0f / (f + 5.0f));
 			if (Vegan) {
 				animator.SetTrigger ("toCarnivore");
 			} else {
 				animator.SetTrigger ("toVegan");
 			}
-			yield return new WaitForSeconds (2 / (f + 1.0f));
+			yield return new WaitForSeconds (1.0f / (f + 5.0f));
 		}
 	}
 
