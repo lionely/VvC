@@ -10,13 +10,13 @@ public class MainMenu : MonoBehaviour {
 	public GameObject levelLoader;
 	Button carn;
 	Button vegan;
-	Image vs;
-	float amplitudeX = 10.0f;
+	Image vs; //TODO 
+	//float amplitudeX = 10.0f;
 	float amplitudeY = 5.0f;
-	float omegaX = 1.0f;
+	//float omegaX = 1.0f;
 	float omegaY = 5.0f;
 	float t;
-
+	IEnumerator fader;
 
 	void Start()
 	{
@@ -28,14 +28,15 @@ public class MainMenu : MonoBehaviour {
 
 		PlayerPrefs.GetInt ("HighScore");// loads the highscore from memory
 
-
 	}
 
 
 	void Update()
 	{
 		buttonJiggle ();
-		vsEffect ();
+		fader = vsEffect();
+		StartCoroutine (fader);
+
 		//StartCoroutine("buttonJiggle");
 	}
 
@@ -49,7 +50,7 @@ public class MainMenu : MonoBehaviour {
 	{
 		Player.Vegan = false;
 		Instantiate(levelLoader, levelLoader.transform.position, levelLoader.transform.rotation);
-		Loading.levelToLoad = "Info";
+		Loading.levelToLoad = "GamePlay";
 		//SceneManager.LoadScene ("GamePlay",LoadSceneMode.Single);//loads scenes
 	}
 
@@ -57,8 +58,14 @@ public class MainMenu : MonoBehaviour {
 	{
 		Player.Vegan = true;
 		Instantiate(levelLoader, levelLoader.transform.position, levelLoader.transform.rotation);
-		Loading.levelToLoad = "Info";
+		Loading.levelToLoad = "GamePlay";
 		//SceneManager.LoadScene ("GamePlay",LoadSceneMode.Single);//loads scenes
+	}
+
+	public void HowToPlay()
+	{
+		Instantiate(levelLoader, levelLoader.transform.position, levelLoader.transform.rotation);
+		Loading.levelToLoad = "HowToPlay";
 	}
 
 	void buttonJiggle()
@@ -78,12 +85,26 @@ public class MainMenu : MonoBehaviour {
 		vegan.transform.localPosition = new Vector3 (vX, -y, 0);
 	}
 
-	void vsEffect()
+	IEnumerator vsEffect()
 	{	
 		Color c = vs.color;
-		print (c.a);
-		c.a = 0;
-		vs.color = c;
+
+		while(c.a >= 0) //fade out
+		{
+			c.a -= Time.deltaTime / 1;
+			vs.color = c;
+			yield return null;
+		}
+
+		while (c.a <= 1) //fade in
+		{
+			c.a += Time.deltaTime / 1;
+			vs.color = c;
+
+			//StartCoroutine (fader);
+			yield return null;
+		}
+
 	}
 
 

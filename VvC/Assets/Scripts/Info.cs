@@ -10,6 +10,6 @@ public class Info : MonoBehaviour {
 	public void loadGame()
 	{
 		Instantiate(levelLoader, levelLoader.transform.position, levelLoader.transform.rotation);
-		Loading.levelToLoad = "GamePlay";
+		Loading.levelToLoad = "MainMenu";
 	}
 }
