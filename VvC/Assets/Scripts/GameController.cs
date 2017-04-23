@@ -80,7 +80,7 @@ public class GameController : MonoBehaviour {
 	public void LoseLife () {
 		life -= 1;
 		lifeText.text = "Life: " + life;
-		scoreSinceHit = 0;
+		scoreSinceHit = (int) Mathf.Floor(scoreSinceHit*0.9f);
 
 		// Juice Effects
 		LoseLifeEffects();
