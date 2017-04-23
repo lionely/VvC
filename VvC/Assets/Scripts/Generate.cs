@@ -95,6 +95,7 @@ public class Generate : MonoBehaviour {
 		}  else {
 			Instantiate(mushroom[0]);
 			foodInARow = 0;
+
 		}
 	}
 

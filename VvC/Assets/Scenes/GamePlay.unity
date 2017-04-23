@@ -562,12 +562,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0dbddcd055de644399d79b63277e1de8, type: 2}
   m_IsPrefabParent: 0
---- !u!114 &388122396 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114905211167083934, guid: 0dbddcd055de644399d79b63277e1de8,
-    type: 2}
-  m_PrefabInternal: {fileID: 388122393}
-  m_Script: {fileID: 11500000, guid: 4e3cbed1421304327833c4091a247aca, type: 3}
 --- !u!1 &493421914
 GameObject:
   m_ObjectHideFlags: 0

@@ -23,7 +23,7 @@ public class ParticleEffect : MonoBehaviour {
 	}
 
 	public void GoodParticles () {
-		Instantiate(damageParticle1, new Vector3(rb.position.x, -7.0f, rb.position.y), rb.transform.rotation);
-		Instantiate(damageParticle2, new Vector3(rb.position.x, -7.0f, rb.position.y), rb.transform.rotation);
+		Instantiate(shineParticle1, new Vector3(rb.position.x, -7.0f, rb.position.y), rb.transform.rotation);
+		Instantiate(shineParticle2, new Vector3(rb.position.x, -7.0f, rb.position.y), rb.transform.rotation);
 	}
 }
