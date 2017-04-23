@@ -1106,9 +1106,13 @@ MonoBehaviour:
   pauseText: {fileID: 1064562711}
   backButton: {fileID: 1208978956}
   deathExplosion: {fileID: 139366, guid: b185c1a9cf067374586d095111b15bd1, type: 2}
-  goodParticle: {fileID: 1688608666086824, guid: 610bb27b3a963431ab449f06db8b5dad,
+  shineParticle1: {fileID: 1688608666086824, guid: 610bb27b3a963431ab449f06db8b5dad,
     type: 2}
-  badParticle: {fileID: 1347071919777640, guid: 9787d5da58eba44269cd38184536c2de,
+  shineParticle2: {fileID: 1090511518458834, guid: f5db58add4a3b418387603aaaf385307,
+    type: 2}
+  damageParticle1: {fileID: 1345159862686236, guid: a1dcc260b67b147ae8a208301180d855,
+    type: 2}
+  damageParticle2: {fileID: 1942640871962584, guid: c6c08a203eeff4525a63a5a13074475a,
     type: 2}
   goodSound:
   - {fileID: 8300000, guid: 8e9625806f7094671ab8c6bf115c3568, type: 3}

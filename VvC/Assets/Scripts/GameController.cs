@@ -16,8 +16,10 @@ public class GameController : MonoBehaviour {
 
 	public GameObject backButton;
 	public GameObject deathExplosion;
-	public GameObject goodParticle = GameObject.Find("GoodParticle");
-	public GameObject badParticle;
+	public GameObject shineParticle1;
+	public GameObject shineParticle2;
+	public GameObject damageParticle1;
+	public GameObject damageParticle2;
 
 	public AudioClip[] goodSound = new AudioClip[3];
 	public AudioClip[] badSound = new AudioClip[3];
@@ -68,7 +70,8 @@ public class GameController : MonoBehaviour {
 		scoreText.text = "Score: " + score;
 
 		// Good Particles
-		Instantiate(goodParticle, new Vector3(rb.position.x, -7.0f, rb.position.y), player.transform.rotation);
+		Instantiate(shineParticle1, new Vector3(rb.position.x, -7.0f, rb.position.y), player.transform.rotation);
+		Instantiate(shineParticle2, new Vector3(rb.position.x, -7.0f, rb.position.y), player.transform.rotation);
 
 		// Juice Effects
 		GainPointEffects();
@@ -100,7 +103,8 @@ public class GameController : MonoBehaviour {
 		camShake.Shake(0.1f, 0.5f);
 
 		// Bad Particles
-		// Instantiate(badParticle, new Vector3(rb.position.x, -7.0f, rb.position.y), player.transform.rotation);
+		Instantiate(damageParticle1, new Vector3(rb.position.x, -7.0f, rb.position.y), player.transform.rotation);
+		Instantiate(damageParticle2, new Vector3(rb.position.x, -7.0f, rb.position.y), player.transform.rotation);
 	}
 
 	public void GainPointEffects () {
