@@ -5,26 +5,24 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour {
+	
+	Player player;
+	Rigidbody2D rb;
 
-	public Player player;
+	public ShakeCamera camShake;
+	public ParticleEffect particle;
+
 	public Text scoreText;
 	public Text lifeText;
 	public Text pauseText;
 
-	ShakeCamera camShake;
-	Rigidbody2D rb;
-
 	public GameObject backButton;
 	public GameObject pausePanel;
 	public GameObject deathExplosion;
-	public GameObject shineParticle1;
-	public GameObject shineParticle2;
-	public GameObject damageParticle1;
-	public GameObject damageParticle2;
 
 	public AudioClip[] goodSound = new AudioClip[3];
 	public AudioClip[] badSound = new AudioClip[3];
-	AudioSource audio;
+	public AudioSource audio;
 
 	public static int score;
 	private int scoreSinceHit;
@@ -40,8 +38,8 @@ public class GameController : MonoBehaviour {
 
 	// Use this for initialization
 	void Awake () {
+		player = player = GameObject.Find("Player").GetComponent<Player> ();
 		rb = player.GetComponent<Rigidbody2D> ();
-		camShake = GameObject.Find("MainCamera").GetComponent<ShakeCamera> ();
 		backButton.SetActive(false);
 		pausePanel.SetActive(false);
 		paused = false;
@@ -70,10 +68,6 @@ public class GameController : MonoBehaviour {
 		score += 1;
 		scoreSinceHit += 1;
 		scoreText.text = "Score: " + score;
-
-		// Good Particles
-		Instantiate(shineParticle1, new Vector3(rb.position.x, -7.0f, rb.position.y), player.transform.rotation);
-		Instantiate(shineParticle2, new Vector3(rb.position.x, -7.0f, rb.position.y), player.transform.rotation);
 
 		// Juice Effects
 		GainPointEffects();
@@ -105,8 +99,7 @@ public class GameController : MonoBehaviour {
 		camShake.Shake(0.1f, 0.5f);
 
 		// Bad Particles
-		Instantiate(damageParticle1, new Vector3(rb.position.x, -7.0f, rb.position.y), player.transform.rotation);
-		Instantiate(damageParticle2, new Vector3(rb.position.x, -7.0f, rb.position.y), player.transform.rotation);
+		particle.BadParticles();
 	}
 
 	public void GainPointEffects () {
@@ -117,6 +110,9 @@ public class GameController : MonoBehaviour {
 		audio.Play ();
 		//source.pitch = Random.Range (0.8f, 1.2f);
 		//source.Play ();
+
+		// Good Particles
+		particle.GoodParticles();
 	}
 
 	IEnumerator FreezeAndResume (float waitTime) {
