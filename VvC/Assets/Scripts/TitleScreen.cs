@@ -5,13 +5,28 @@ using UnityEngine;
 public class TitleScreen : MonoBehaviour {
 
 	public GameObject levelLoader;
-	private bool firstLoad = true;//assuming first time loading game
+	//TODO test this
+	private string firstLoad ;//assuming first time loading game need to save to player prefs
 
+
+	void Awake()
+	{
+//		PlayerPrefs.SetString ("Loaded", "true");
+//		print((PlayerPrefs.GetString ("Loaded")));
+
+		if (PlayerPrefs.GetString ("Loaded").Equals (null)) 
+		{
+			PlayerPrefs.SetString ("Loaded", "true");
+		}
+
+	}
 	public void goMainMenu()
 	{
-		if (firstLoad) 
+		firstLoad = PlayerPrefs.GetString ("Loaded");
+
+		if (firstLoad.Equals("true")) 
 		{
-			firstLoad = false;
+			PlayerPrefs.SetString ("Loaded", "false");
 			Instantiate (levelLoader, levelLoader.transform.position, levelLoader.transform.rotation);
 			Loading.levelToLoad = "Info";
 		} 

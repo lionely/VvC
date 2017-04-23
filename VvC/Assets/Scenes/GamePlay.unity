@@ -723,7 +723,7 @@ AudioSource:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 388122394}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
@@ -1110,10 +1110,14 @@ MonoBehaviour:
     type: 2}
   badParticle: {fileID: 1347071919777640, guid: 9787d5da58eba44269cd38184536c2de,
     type: 2}
-  sound:
+  goodSound:
   - {fileID: 8300000, guid: 8e9625806f7094671ab8c6bf115c3568, type: 3}
   - {fileID: 8300000, guid: c9e76be38c33b455ea24b2c489089eff, type: 3}
   - {fileID: 8300000, guid: fd424928826b0455ea9cafedc56a9aa4, type: 3}
+  badSound:
+  - {fileID: 8300000, guid: f580d038c12984f478430011d11f5b76, type: 3}
+  - {fileID: 8300000, guid: a57d9d9efc3124c5b964afac8601fb7d, type: 3}
+  - {fileID: 8300000, guid: 09c521a19a2514f788824c71e317dae0, type: 3}
   paused: 1
   speed: 0
 --- !u!4 &955103205

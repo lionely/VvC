@@ -19,7 +19,8 @@ public class GameController : MonoBehaviour {
 	public GameObject goodParticle = GameObject.Find("GoodParticle");
 	public GameObject badParticle;
 
-	public AudioClip[] sound = new AudioClip[3];
+	public AudioClip[] goodSound = new AudioClip[3];
+	public AudioClip[] badSound = new AudioClip[3];
 	AudioSource audio;
 
 	public static int score;
@@ -87,6 +88,11 @@ public class GameController : MonoBehaviour {
 	}
 
 	public void LoseLifeEffects () {
+
+		audio.clip = badSound[Random.Range (0, goodSound.Length)];
+		audio.pitch = Random.Range (0.8f, 1.2f);
+		audio.Play ();
+
 		// Pauses objects and decorations for 1 sec
 		StartCoroutine(FreezeAndResume(1.0f));
 
@@ -98,7 +104,7 @@ public class GameController : MonoBehaviour {
 	}
 
 	public void GainPointEffects () {
-		audio.clip = sound [Random.Range (0, sound.Length)];
+		audio.clip = goodSound [Random.Range (0, goodSound.Length)];
 		//print (audio.clip.name);
 		audio.pitch = Random.Range (0.8f, 1.2f);
 		//print (audio.pitch);
