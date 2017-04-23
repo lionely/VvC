@@ -138,14 +138,14 @@ public class GameController : MonoBehaviour {
 			Time.timeScale = 0;
 			pauseText.text = "Resume";
 			player.GetComponent<TouchMovement>().enabled = false;
-			backButton.SetActive (true);
+			backButton.SetActive(true);
 		}
 
 		else if (!paused) {
 			Time.timeScale = 1; // remember this freezes/unfreezes everything
 			pauseText.text = "Pause";
 			player.GetComponent<TouchMovement>().enabled = true;
-			backButton.SetActive (false);
+			backButton.SetActive(false);
 		}
 	}
 
