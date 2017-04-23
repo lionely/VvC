@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4547288940495380}
   - component: {fileID: 212282288090772258}
   - component: {fileID: 95164186895911514}
+  - component: {fileID: 111664092853069698}
   m_Layer: 0
   m_Name: Veggie_Runner
   m_TagString: Untagged
@@ -48,9 +49,9 @@ Animator:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1072039514332712}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 233aafea87df449d89d3dedb37403e02, type: 2}
+  m_Controller: {fileID: 9100000, guid: 1df1575e76ab84704a94e261abeb46f8, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -58,6 +59,20 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!111 &111664092853069698
+Animation:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1072039514332712}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 62a57752a0fb34de3bbcd61b7166f424, type: 2}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!212 &212282288090772258
 SpriteRenderer:
   m_ObjectHideFlags: 1
