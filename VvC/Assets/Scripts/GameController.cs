@@ -15,6 +15,7 @@ public class GameController : MonoBehaviour {
 	Rigidbody2D rb;
 
 	public GameObject backButton;
+	public GameObject pausePanel;
 	public GameObject deathExplosion;
 	public GameObject shineParticle1;
 	public GameObject shineParticle2;
@@ -41,7 +42,8 @@ public class GameController : MonoBehaviour {
 	void Awake () {
 		rb = player.GetComponent<Rigidbody2D> ();
 		camShake = GameObject.Find("MainCamera").GetComponent<ShakeCamera> ();
-		backButton.SetActive (false);
+		backButton.SetActive(false);
+		pausePanel.SetActive(false);
 		paused = false;
 		died = false;
 		score = 0;
@@ -139,6 +141,7 @@ public class GameController : MonoBehaviour {
 			pauseText.text = "Resume";
 			player.GetComponent<TouchMovement>().enabled = false;
 			backButton.SetActive(true);
+			pausePanel.SetActive(true);
 		}
 
 		else if (!paused) {
@@ -146,6 +149,7 @@ public class GameController : MonoBehaviour {
 			pauseText.text = "Pause";
 			player.GetComponent<TouchMovement>().enabled = true;
 			backButton.SetActive(false);
+			pausePanel.SetActive(false);
 		}
 	}
 
