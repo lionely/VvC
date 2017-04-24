@@ -35,9 +35,6 @@ public class MainMenu : MonoBehaviour {
 	{
 		buttonJiggle ();
 		fade ();
-//		StartCoroutine (vsOut);
-
-		//StartCoroutine("buttonJiggle");
 	}
 
 	public void QuitGame()
