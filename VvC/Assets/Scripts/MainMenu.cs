@@ -34,8 +34,8 @@ public class MainMenu : MonoBehaviour {
 	void Update()
 	{
 		buttonJiggle ();
-		fader = vsEffect();
-		StartCoroutine (fader);
+		fade ();
+//		StartCoroutine (vsOut);
 
 		//StartCoroutine("buttonJiggle");
 	}
@@ -85,27 +85,42 @@ public class MainMenu : MonoBehaviour {
 		vegan.transform.localPosition = new Vector3 (vX, -y, 0);
 	}
 
-	IEnumerator vsEffect()
+
+	private void fade()
+	{
+		Color c = vs.color;
+		if (c.a >0) 
+		{
+			StartCoroutine ("vsOut");
+			StopCoroutine ("vsOut");
+		} else 
+		{
+			StartCoroutine ("vsIn");
+			}
+	}
+
+	IEnumerator vsOut()
 	{	
 		Color c = vs.color;
-
-		while(c.a >= 0) //fade out
+		while(c.a > 0) //fade out
 		{
 			c.a -= Time.deltaTime / 1;
 			vs.color = c;
 			yield return null;
 		}
+	}
 
-		while (c.a <= 1) //fade in
+	IEnumerator vsIn()
+	{
+		Color c = vs.color;
+		while (c.a < 1) //fade in
 		{
 			c.a += Time.deltaTime / 1;
 			vs.color = c;
-
-			//StartCoroutine (fader);
 			yield return null;
 		}
-
 	}
+
 
 
 }

@@ -381,7 +381,7 @@ GameObject:
   - component: {fileID: 652581388}
   - component: {fileID: 652581387}
   m_Layer: 5
-  m_Name: Button
+  m_Name: VvC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -395,7 +395,7 @@ RectTransform:
   m_GameObject: {fileID: 652581385}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.5, y: 3.5, z: 0.5}
+  m_LocalScale: {x: 3.5, y: 3, z: 0.5}
   m_Children:
   - {fileID: 700902980}
   m_Father: {fileID: 1206823879}
@@ -547,18 +547,18 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 40
+    m_FontSize: 45
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 4
-    m_MaxSize: 40
+    m_MaxSize: 45
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "touch \n"
+  m_Text: "Touch \n"
 --- !u!222 &700902982
 CanvasRenderer:
   m_ObjectHideFlags: 0
