@@ -4,17 +4,18 @@ using UnityEngine;
 
 public class FoodFall : MonoBehaviour {
 
-	public GameObject[] food = new GameObject[6];
+	public GameObject[] food = new GameObject[5];
 	private int foodIndex;
 
 	// Use this for initialization
 	void Start () {
-		
+		InvokeRepeating ("spawnItem", .5f, 2.0f);
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		foodIndex = Random.Range (0, 5);
+		
+
+	void spawnItem(){
+		foodIndex = Random.Range (0, 4);
 		Instantiate (food [foodIndex]);
 	}
+
 }
