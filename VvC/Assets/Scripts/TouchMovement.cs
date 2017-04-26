@@ -5,6 +5,8 @@ public class TouchMovement : MonoBehaviour {
 	private int pos = 0;
 	private Rigidbody2D player;
 
+	private static float LANE_WIDTH = 2.25f;
+
 	private void Awake(){
 		player = GetComponent<Rigidbody2D>();
 	}
@@ -21,7 +23,7 @@ public class TouchMovement : MonoBehaviour {
 				//touch left
 				if (touchPos.x < player.position.x && touchPos.y < 6.5 && pos != -1) 
 				{ 
-					this.transform.position = new Vector3 (player.transform.position.x - 2.25f, 
+					this.transform.position = new Vector3 (player.transform.position.x - LANE_WIDTH, 
 						player.transform.position.y, -1);
 					pos = pos - 1;
 				} 
@@ -29,7 +31,7 @@ public class TouchMovement : MonoBehaviour {
 				//touch right
 				else if (touchPos.x > player.position.x && touchPos.y < 6.5 && pos != 1) 
 				{ 
-					this.transform.position = new Vector3 (player.transform.position.x + 2.25f, 
+					this.transform.position = new Vector3 (player.transform.position.x + LANE_WIDTH, 
 						player.transform.position.y, -1);
 					pos = pos + 1;
 				}
