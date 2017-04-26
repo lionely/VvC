@@ -5,7 +5,7 @@ using UnityEngine;
 public class Generate : MonoBehaviour {
 
 	Player player;
-	public GameObject[] veggie = new GameObject[3];
+	public GameObject[] veggie = new GameObject[3]; //Veggie types
 	public GameObject[] meat = new GameObject[3];
 	public GameObject[] mushroom = new GameObject[1];
 
@@ -14,8 +14,8 @@ public class Generate : MonoBehaviour {
 
 	private GameController gc;
 
-	private int index;
-	private int decorationIndex; //Number corresponds to a decoration type
+	private int obstacleIndex;	//Number corresponds to a obstacle type
+	private int decorationIndex;
 	private int chanceVM; // if 0 make meat, else veggie
 	private int foodInARow = 0; //Keeps track of multiple types of food spawning in a row
 
@@ -39,7 +39,7 @@ public class Generate : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		chanceVM = Random.Range (0, 11); // 0-10 
-		index = Random.Range (0, 2); // 0 or 1
+		obstacleIndex = Random.Range (0, 3); // 0-2
 		decorationIndex = Random.Range(0, 3); // 0-2
 
 		// Only generate objects if game not paused
@@ -67,10 +67,10 @@ public class Generate : MonoBehaviour {
 		if (chanceVM >= 0 && chanceVM <= 4) {
 			//Checks if two veggies have been spawned in a row to avoid impossible situations.
 			if (foodInARow == -2) {
-				Instantiate (meat [index]);
+				Instantiate (meat [obstacleIndex]);
 				foodInARow = 1;
 			} else {
-				Instantiate (veggie [index]);
+				Instantiate (veggie [obstacleIndex]);
 				if (foodInARow > 0) {
 					foodInARow = -1;
 				}
@@ -82,10 +82,10 @@ public class Generate : MonoBehaviour {
 		}  else if (chanceVM >= 5 && chanceVM <= 9) {
 			//Checks if two meat have been spawned in a row to avoid impossible situations.
 			if (foodInARow == 2) {
-				Instantiate (veggie [index]);
+				Instantiate (veggie [obstacleIndex]);
 				foodInARow = -1;
 			} else {
-				Instantiate (meat [index]);
+				Instantiate (meat [obstacleIndex]);
 				if (foodInARow < 0) {
 					foodInARow = 1;
 				}
