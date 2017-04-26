@@ -8,9 +8,9 @@ public class Obstacle : MonoBehaviour {
 	 */
 
 	private float START_Y = 7.0f; // Below the navigation bar
-	private float LEFTLANE_X = -2.25f;
+	private float LEFTLANE_X = -2.5f;
 	private float MIDLANE_X = 0.0f;
-	private float RIGHTLANE_X = 2.25f;
+	private float RIGHTLANE_X = 2.5f;
 	private Rigidbody2D rigi;
 	private GameController gc;
 	private float downward_speed;
