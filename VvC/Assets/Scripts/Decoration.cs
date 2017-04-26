@@ -6,7 +6,7 @@ public class Decoration : MonoBehaviour {
 
 	private float START_Y = 7.0f; // Below the navigation bar
 	private float LEFTLANE_X = -4.5f;
-	private float RIGHTLANE_X = 4.5f;
+	private float RIGHTLANE_X = 4.85f;
 	private Rigidbody2D rigi;
 	private GameController gc;
 	private float downward_speed;
@@ -30,6 +30,9 @@ public class Decoration : MonoBehaviour {
 	void Start () {
 		index = Random.Range (0, 2);
 		transform.position = new Vector2 (decorationPosX [index], START_Y);
+		if (Random.Range (0, 2) == 1) {
+			transform.Rotate (new Vector3 (0.0f, 180.0f, 0.0f));
+		}
 	}
 
 	// Called once per frame

@@ -15,6 +15,7 @@ public class Generate : MonoBehaviour {
 	private GameController gc;
 
 	private int index;
+	private int decorationIndex; //Number corresponds to a decoration type
 	private int chanceVM; // if 0 make meat, else veggie
 	private int foodInARow = 0; //Keeps track of multiple types of food spawning in a row
 
@@ -39,6 +40,7 @@ public class Generate : MonoBehaviour {
 	void Update () {
 		chanceVM = Random.Range (0, 11); // 0-10 
 		index = Random.Range (0, 2); // 0 or 1
+		decorationIndex = Random.Range(0, 3); // 0-2
 
 		// Only generate objects if game not paused
 		if (!gc.paused) {
@@ -103,9 +105,9 @@ public class Generate : MonoBehaviour {
 	void CreateDecoration(){
 		
 		if (Player.Vegan) {
-			Instantiate (decorationVeggie [index]);
+			Instantiate (decorationVeggie [decorationIndex]);
 		}  else {
-			Instantiate (decorationMeat [index]);
+			Instantiate (decorationMeat [decorationIndex]);
 		}
 
 	}
