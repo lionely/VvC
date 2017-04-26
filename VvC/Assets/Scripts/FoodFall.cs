@@ -9,7 +9,7 @@ public class FoodFall : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		InvokeRepeating ("spawnItem", .5f, 2.0f);
+		InvokeRepeating ("spawnItem", .5f, .2f);
 	}
 		
 

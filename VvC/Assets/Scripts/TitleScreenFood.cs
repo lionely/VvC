@@ -10,7 +10,7 @@ public class TitleScreenFood : MonoBehaviour {
 	// Use this for initialization of an Obstacle
 	void Start () {
 		rigi = GetComponent<Rigidbody2D>();
-		spawnPosition = Random.Range (-2, 2);
+		spawnPosition = Random.Range (-2, 3);
 		transform.position = new Vector2 ((float) spawnPosition, 7.0f);
 		rigi.velocity = new Vector2 (0.0f, -2.0f);
 
