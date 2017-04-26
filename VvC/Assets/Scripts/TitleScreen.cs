@@ -8,14 +8,10 @@ public class TitleScreen : MonoBehaviour {
 	public GameObject levelLoader;
 	Text touch;
 
-	private string firstLoad ;//assuming first time loading game need to save to player prefs
-
+	private string firstLoad ;
 
 	void Awake()
 	{
-//		PlayerPrefs.SetString ("Loaded", "true");
-//		print((PlayerPrefs.GetString ("Loaded")));
-
 		if (PlayerPrefs.GetString ("Loaded").Equals (null)) 
 		{
 			PlayerPrefs.SetString ("Loaded", "true");
@@ -24,6 +20,7 @@ public class TitleScreen : MonoBehaviour {
 		touch = GameObject.Find ("Text").GetComponent<Text> ();
 
 	}
+
 	public void goMainMenu()
 	{
 		firstLoad = PlayerPrefs.GetString ("Loaded");
@@ -43,16 +40,16 @@ public class TitleScreen : MonoBehaviour {
 	}
 
 
-	// Use this for initialization
-	void Start () {
-		
-	}
+
 	
 	// Update is called once per frame
 	void Update () {
 		fade ();
 	}
 
+	/*
+	 * Fades Text on title screen.
+	 */
 	private void fade()
 	{
 		Color c = touch.color;

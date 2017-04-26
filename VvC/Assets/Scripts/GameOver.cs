@@ -5,9 +5,12 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameOver : MonoBehaviour {
+
+	//The highscore is calculated here.
+
 	Text ScoreText;
 	int score;
-	public static int highScore; //highscore is calculated here.
+	public static int highScore; 
 
 	void Awake()
 	{	score = GameController.score;
@@ -19,11 +22,6 @@ public class GameOver : MonoBehaviour {
 		DisplayScore ();
 	}
 
-	// Update is called once per frame
-	void Update () {
-
-	}
-
 	public void TryAgain(){
 		SceneManager.LoadScene ("GamePlay",LoadSceneMode.Single);//loads scenes
 	}
@@ -32,8 +30,8 @@ public class GameOver : MonoBehaviour {
 		SceneManager.LoadScene ("MainMenu",LoadSceneMode.Single);//loads scenes
 	}
 
-	/**
-	 *Set the Highest Score and displays
+	/*
+	 *Sets the Highest Score and displays it.
 	 */
 	public void DisplayScore()
 	{	
@@ -43,8 +41,6 @@ public class GameOver : MonoBehaviour {
 			PlayerPrefs.SetInt ("HighScore", highScore);
 		}
 
-//		print (highScore);
-//		print (score);
 		ScoreText.text = "Best:" + " "  + highScore + '\n' + " " + '\n'
 			+ "Score:" + " " + score;
 	}

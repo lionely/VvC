@@ -569,7 +569,23 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 61707263185260524, guid: 0dbddcd055de644399d79b63277e1de8,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 61707263185260524, guid: 0dbddcd055de644399d79b63277e1de8,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 61707263185260524, guid: 0dbddcd055de644399d79b63277e1de8,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 0.2
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 82206138101493366, guid: 0dbddcd055de644399d79b63277e1de8, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 0dbddcd055de644399d79b63277e1de8, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &493421914

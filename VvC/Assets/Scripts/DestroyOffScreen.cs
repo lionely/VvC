@@ -4,18 +4,12 @@ using UnityEngine;
 
 public class DestroyOffScreen : MonoBehaviour {
 	 
-	//TODO need to destroy all objects off screen, or  game will slow down.
+	//This script destroys all objects off screen.
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
+	/*
+	 * When an object offscreen collides with the
+	 * block off-screen it is destroyed.
+	 */
 	void OnCollisionEnter2D(Collision2D col) {
 			Destroy(col.gameObject,.5f);
 

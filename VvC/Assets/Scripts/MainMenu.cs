@@ -7,27 +7,26 @@ using UnityEngine.UI;
 public class MainMenu : MonoBehaviour {
 
 	GameObject music;
+
 	public GameObject levelLoader;
+
 	Button carn;
 	Button vegan;
-	Image vs; //TODO 
-	//float amplitudeX = 10.0f;
+	Image vs; 
+
 	float amplitudeY = 5.0f;
-	//float omegaX = 1.0f;
 	float omegaY = 5.0f;
 	float t;
+
 	IEnumerator fader;
 
 	void Start()
 	{
-		
 		carn = GameObject.Find ("Carn").GetComponent<Button> ();
 		vegan = GameObject.Find ("Vegan").GetComponent<Button> ();
 		vs = GameObject.Find ("Vs Logo").GetComponent<Image> ();
-		//vs.transform.position = new Vector3 (0, 0, z);
 
 		PlayerPrefs.GetInt ("HighScore");// loads the highscore from memory
-
 	}
 
 
@@ -48,7 +47,6 @@ public class MainMenu : MonoBehaviour {
 		Player.Vegan = false;
 		Instantiate(levelLoader, levelLoader.transform.position, levelLoader.transform.rotation);
 		Loading.levelToLoad = "GamePlay";
-		//SceneManager.LoadScene ("GamePlay",LoadSceneMode.Single);//loads scenes
 	}
 
 	public void ChooseVegan()
@@ -56,7 +54,6 @@ public class MainMenu : MonoBehaviour {
 		Player.Vegan = true;
 		Instantiate(levelLoader, levelLoader.transform.position, levelLoader.transform.rotation);
 		Loading.levelToLoad = "GamePlay";
-		//SceneManager.LoadScene ("GamePlay",LoadSceneMode.Single);//loads scenes
 	}
 
 	public void HowToPlay()
@@ -65,6 +62,9 @@ public class MainMenu : MonoBehaviour {
 		Loading.levelToLoad = "HowToPlay";
 	}
 
+	/*
+	 * Allows the button to move up and down
+	 */
 	void buttonJiggle()
 	{
 
@@ -72,10 +72,9 @@ public class MainMenu : MonoBehaviour {
 		float cY = carn.transform.localPosition.y;
 
 		float vX = vegan.transform.localPosition.x;
-		//float vY = vegan.transform.localPosition.y;
+
 
 		t += Time.deltaTime; 
-		//float x = amplitudeX*Mathf.Cos (omegaX*t);
 		float y = Mathf.Abs (0.039f*amplitudeY*Mathf.Sin (omegaY*t) + cY);
 
 		carn.transform.localPosition = new Vector3(cX,y,0);
@@ -83,6 +82,9 @@ public class MainMenu : MonoBehaviour {
 	}
 
 
+	/*
+	 * Fades vs image in and out by using two helper methods.
+	 */
 	private void fade()
 	{
 		Color c = vs.color;
@@ -96,6 +98,10 @@ public class MainMenu : MonoBehaviour {
 			}
 	}
 
+
+	/*
+	 * Fades vs image out
+	 */
 	IEnumerator vsOut()
 	{	
 		Color c = vs.color;
@@ -107,6 +113,9 @@ public class MainMenu : MonoBehaviour {
 		}
 	}
 
+	/*
+	 * Fades vs image in
+	 */
 	IEnumerator vsIn()
 	{
 		Color c = vs.color;
