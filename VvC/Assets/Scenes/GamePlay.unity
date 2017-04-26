@@ -400,12 +400,12 @@ MonoBehaviour:
   - {fileID: 1827622847532794, guid: 1d3b84e994efa47cfb63046d84ad30c6, type: 2}
   decorationMeat:
   - {fileID: 1815173895466292, guid: 62dfa3a7d75454f52a1474b42d0680f1, type: 2}
-  - {fileID: 1630474013851058, guid: e414784a9bf7c4a1bb4fe03fa332e923, type: 2}
-  - {fileID: 1992808579391490, guid: 306b3f28cc8a949d5abdad3056a0cf97, type: 2}
+  - {fileID: 1947926533030594, guid: 88ef620a2d1054b8b9bd26c4e79d8891, type: 2}
+  - {fileID: 1920664658414488, guid: 963a5e6cbbc32437ab0c23eda44a0f76, type: 2}
   decorationVeggie:
   - {fileID: 1304091180250238, guid: 90cdef417c1d245e7a3d96632d066796, type: 2}
-  - {fileID: 1809619234759672, guid: 8ecb921bdc2e9423bb55b33ef2054e31, type: 2}
-  - {fileID: 1128204303735160, guid: 80bb8f423c7034014a2803f7659a1535, type: 2}
+  - {fileID: 1224329144450378, guid: f5d8643dfa154441288cb9bd7eb7af1b, type: 2}
+  - {fileID: 1494298972883422, guid: 41d62f3a30a0b450191dbd6fa7504ddb, type: 2}
 --- !u!4 &178350552
 Transform:
   m_ObjectHideFlags: 0
