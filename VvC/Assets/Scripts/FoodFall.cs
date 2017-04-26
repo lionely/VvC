@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FoodFall : MonoBehaviour {
 
-	public GameObject[] food = new GameObject[5];
+	public GameObject[] food = new GameObject[4];
 	private int foodIndex;
 
 	// Use this for initialization
@@ -14,7 +14,7 @@ public class FoodFall : MonoBehaviour {
 		
 
 	void spawnItem(){
-		foodIndex = Random.Range (0, 4);
+		foodIndex = Random.Range (0, 3);
 		Instantiate (food [foodIndex]);
 	}
 

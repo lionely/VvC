@@ -205,7 +205,7 @@ Transform:
   m_LocalScale: {x: 22, y: 1, z: 3}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &480432080
 GameObject:
@@ -307,6 +307,51 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelLoader: {fileID: 100000, guid: 758b96ea27ba54ab0bfd4dbd96535410, type: 2}
+--- !u!1 &514116037
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 514116039}
+  - component: {fileID: 514116038}
+  m_Layer: 0
+  m_Name: veggieFall
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &514116038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 514116037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47031b9a7ed6f4929b8f6c2af518a09b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  food:
+  - {fileID: 1171489512616188, guid: 5971c41ef29734a94b99f84f5fe4b550, type: 2}
+  - {fileID: 1158593001470624, guid: 99b0b54eb43484cb1a84c5d3e4283b4b, type: 2}
+  - {fileID: 1767224313932168, guid: 4dc8f4219848749d9a9a1645ebceac75, type: 2}
+  - {fileID: 1809063911123814, guid: b07f7d39a897d43ed8d1dbabf465275d, type: 2}
+--- !u!4 &514116039
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 514116037}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 650, y: 1280, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &560834589
 GameObject:
   m_ObjectHideFlags: 0
@@ -395,7 +440,7 @@ RectTransform:
   m_GameObject: {fileID: 652581385}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 2, y: 1.5, z: 0.5}
   m_Children:
   - {fileID: 700902980}
   m_Father: {fileID: 1206823879}
@@ -610,10 +655,10 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 960, y: 640}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -668,7 +713,7 @@ GameObject:
   - component: {fileID: 1967566373}
   - component: {fileID: 1967566374}
   m_Layer: 0
-  m_Name: foodFall
+  m_Name: meatFall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -681,7 +726,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1967566372}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 720, y: 1280, z: 0}
+  m_LocalPosition: {x: 850, y: 1280, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -699,10 +744,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   food:
-  - {fileID: 1171489512616188, guid: 5971c41ef29734a94b99f84f5fe4b550, type: 2}
-  - {fileID: 1158593001470624, guid: 99b0b54eb43484cb1a84c5d3e4283b4b, type: 2}
   - {fileID: 1351298204728302, guid: 1b6ba96b0416244208f6c05977736d61, type: 2}
   - {fileID: 1614113578959568, guid: d1db5416621a44e498914c2ef48d7e40, type: 2}
+  - {fileID: 1914839716237044, guid: f7462453a33a34334a94090b64205912, type: 2}
   - {fileID: 1809063911123814, guid: b07f7d39a897d43ed8d1dbabf465275d, type: 2}
 --- !u!1 &2039186415
 GameObject:
