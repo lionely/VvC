@@ -5,8 +5,8 @@ using UnityEngine;
 public class Generate : MonoBehaviour {
 
 	Player player;
-	public GameObject[] veggie = new GameObject[2];
-	public GameObject[] meat = new GameObject[2];
+	public GameObject[] veggie = new GameObject[3];
+	public GameObject[] meat = new GameObject[3];
 	public GameObject[] mushroom = new GameObject[1];
 
 	public GameObject[] decorationMeat = new GameObject[3];

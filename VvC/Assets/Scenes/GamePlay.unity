@@ -393,9 +393,11 @@ MonoBehaviour:
   veggie:
   - {fileID: 1550398501613296, guid: 83626b2e9a1d34f80a2de55f673d05fc, type: 2}
   - {fileID: 1818274056405358, guid: 3b1566d2047d249b6b7031b2237e1233, type: 2}
+  - {fileID: 1146228980468020, guid: f6d73053586dd44e893081ada4126fe1, type: 2}
   meat:
   - {fileID: 1472184300316804, guid: 8314f34e848c24acda3043a1c0089f2a, type: 2}
   - {fileID: 1930948078634370, guid: c2b822f1cbaf3455687d5870aad0d63c, type: 2}
+  - {fileID: 1984404631993024, guid: 7ba2eefdf81bf4ac2b98cc85b60ada6f, type: 2}
   mushroom:
   - {fileID: 1827622847532794, guid: 1d3b84e994efa47cfb63046d84ad30c6, type: 2}
   decorationMeat:
@@ -569,7 +571,23 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 61707263185260524, guid: 0dbddcd055de644399d79b63277e1de8,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 61707263185260524, guid: 0dbddcd055de644399d79b63277e1de8,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 61707263185260524, guid: 0dbddcd055de644399d79b63277e1de8,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 0.2
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 82206138101493366, guid: 0dbddcd055de644399d79b63277e1de8, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 0dbddcd055de644399d79b63277e1de8, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &493421914

@@ -4,6 +4,9 @@ using UnityEngine.SceneManagement;
 
 public class Loading : MonoBehaviour {
 	//Sourced from Holistic Mobile Game development
+	/*
+	 * This script creates the fading effect in between scenes.
+	 */ 
 	public static string levelToLoad;
 	public Texture2D theTexture;
 	
@@ -12,25 +15,11 @@ public class Loading : MonoBehaviour {
 	
 	void Awake()
 	{
-	    //DontDestroyOnLoad(this.gameObject);
-
-//		if (FindObjectsOfType(GetType()).Length > 1)
-//		{
-//			Destroy(gameObject);
-//		}
-
-		StopCoroutine("FadeInCoroutine");
+	    StopCoroutine("FadeInCoroutine");
 		StartCoroutine("FadeInCoroutine");
-		//print ("Loading awake");
-	}
+		}
 	
-	void Start()
-	{
-//	    StopCoroutine("FadeInCoroutine");
-//	    StartCoroutine("FadeInCoroutine");
-		//print ("Loading start coroutine");
-	}
-	
+
 	//Fades inbetween screens.
 	
 	IEnumerator FadeInCoroutine()
@@ -42,7 +31,7 @@ public class Loading : MonoBehaviour {
 	        while (time < fadeInTime)
 	        {
 	            yield return true;
-	            fade += Time.deltaTime / fadeInTime;
+	            fade += Time.deltaTime / fadeInTime; //Fades in
 	            time += Time.deltaTime;
 	        }
 
@@ -50,20 +39,17 @@ public class Loading : MonoBehaviour {
 	        time = 20;
 
 			SceneManager.LoadScene (levelToLoad);//loads scenes
-			//print("Loaded gameplay");
 
-	    	//yield return async;
-	
-	        while (time < (20 + fadeInTime))
+			while (time < (20 + fadeInTime))
 	        {
 	            yield return true;
-	            fade -= Time.deltaTime / fadeInTime;
+	            fade -= Time.deltaTime / fadeInTime; // Fades out
 	            time += Time.deltaTime;
 	        }
 
 	        fade = 0;
 			Destroy(this.gameObject);
-			//print ("Loading was destroyed");
+
 	    }
 	}
 

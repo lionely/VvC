@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class UVscroll : MonoBehaviour {
 	/*
-	 * Scrolls the background
+	 * Scrolls the background by accessing the texture of the bg plane, and displacing the image 
+	 * by a small amount over time.
 	 */
 
 	public Vector2 uvSpeed = new Vector2 (0.0f, 1.0f);
@@ -16,6 +17,7 @@ public class UVscroll : MonoBehaviour {
 	private float SPEED_FACTOR = 0.04f;
 
 	GameController gc;
+
 	// Use this for initialization
 	void Start () {
 		renderer = GetComponent<Renderer>();

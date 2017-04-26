@@ -36,7 +36,7 @@ public class Decoration : MonoBehaviour {
 	}
 
 	// Called once per frame
-	void Update () {
+	void FixedUpdate () {
 		// Set the speed of this decoration to the speed of the scene
 		rigi.velocity = new Vector2 (0.0f, gc.speed);
 	}
