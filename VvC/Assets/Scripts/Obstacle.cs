@@ -36,7 +36,7 @@ public class Obstacle : MonoBehaviour {
 	}
 
 	// Called once per frame
-	void FixedUpdate () {
+	void Update () {
 		// Set the speed of this object to the speed of the scene
 		rigi.velocity = new Vector2 (0.0f, gc.speed);
 	}

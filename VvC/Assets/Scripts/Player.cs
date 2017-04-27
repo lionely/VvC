@@ -72,7 +72,7 @@ public class Player : MonoBehaviour {
 				Destroy(col.gameObject,.1f);
 				gameController.AddScore();
 			}
-			else { // Mushroom
+			else if (col.gameObject.tag == "Mushroom") {
 				Destroy(col.gameObject,.1f);
 				StartCoroutine(mushroom ());
 				gameController.mushroomFreeze();

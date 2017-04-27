@@ -26,13 +26,13 @@ public class SwipeMovement : MonoBehaviour {
 				{
 					if (swipedSideways && deltaX > 0 && pos != -1) //swiped left
 					{
-						this.transform.position = new Vector3(this.transform.position.x - 2.25f, 
+						this.transform.position = new Vector3(this.transform.position.x - 2.5f, 
 							this.transform.position.y, -1);
 						pos = pos - 1;
 					}
 					else if (swipedSideways && deltaX <= 0 && pos != 1) //swiped right
 					{
-						this.transform.position = new Vector3(this.transform.position.x + 2.25f, 
+						this.transform.position = new Vector3(this.transform.position.x + 2.5f, 
 							this.transform.position.y, -1);
 						pos = pos + 1;
 					}

@@ -5,7 +5,7 @@ public class TouchMovement : MonoBehaviour {
 	private int pos = 0;
 	private Rigidbody2D player;
 
-	private static float LANE_WIDTH = 2.25f;
+	private static float LANE_WIDTH = 2.5f;
 
 	private void Awake(){
 		player = GetComponent<Rigidbody2D>();
