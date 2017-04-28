@@ -405,7 +405,7 @@ MonoBehaviour:
   - {fileID: 1947926533030594, guid: 88ef620a2d1054b8b9bd26c4e79d8891, type: 2}
   - {fileID: 1920664658414488, guid: 963a5e6cbbc32437ab0c23eda44a0f76, type: 2}
   decorationVeggie:
-  - {fileID: 0}
+  - {fileID: 1224329144450378, guid: f5d8643dfa154441288cb9bd7eb7af1b, type: 2}
   - {fileID: 1224329144450378, guid: f5d8643dfa154441288cb9bd7eb7af1b, type: 2}
   - {fileID: 1494298972883422, guid: 41d62f3a30a0b450191dbd6fa7504ddb, type: 2}
 --- !u!4 &178350552
