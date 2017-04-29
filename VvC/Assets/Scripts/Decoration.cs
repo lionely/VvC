@@ -5,8 +5,8 @@ using UnityEngine;
 public class Decoration : MonoBehaviour {
 
 	private float START_Y = 7.0f; // Below the navigation bar
-	private float LEFTLANE_X = -4.5f;
-	private float RIGHTLANE_X = 4.85f;
+	private float LEFTLANE_X = -4.7f;
+	private float RIGHTLANE_X = 4.75f;
 	private Rigidbody2D rigi;
 	private GameController gc;
 	private float downward_speed;

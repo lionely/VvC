@@ -14,9 +14,9 @@ public class GameController : MonoBehaviour {
 
 	public Text scoreText;
 	public Text lifeText;
-	public Text pauseText;
 
 	public GameObject backButton;
+	public GameObject resumeButton;
 	public GameObject pausePanel;
 	public GameObject deathExplosion;
 
@@ -41,6 +41,7 @@ public class GameController : MonoBehaviour {
 		player = player = GameObject.Find("Player").GetComponent<Player> ();
 		rb = player.GetComponent<Rigidbody2D> ();
 		backButton.SetActive(false);
+		resumeButton.SetActive(false);
 		pausePanel.SetActive(false);
 		paused = false;
 		died = false;
@@ -67,7 +68,7 @@ public class GameController : MonoBehaviour {
 	public void AddScore () {
 		score += 1;
 		scoreSinceHit += 1;
-		scoreText.text = "Score: " + score;
+		scoreText.text = "SCORE: " + score;
 
 		// Juice Effects
 		GainPointEffects();
@@ -75,7 +76,7 @@ public class GameController : MonoBehaviour {
 
 	public void LoseLife () {
 		life -= 1;
-		lifeText.text = "Life: " + life;
+		lifeText.text = "LIFE: " + life;
 		scoreSinceHit = (int) Mathf.Floor(scoreSinceHit*0.9f);
 
 		// Juice Effects
@@ -128,24 +129,22 @@ public class GameController : MonoBehaviour {
 	}
 
 	public void Pause () {
+		paused = true;
+		Time.timeScale = 0;
+		player.GetComponent<TouchMovement>().enabled = false;
+		backButton.SetActive(true);
+		resumeButton.SetActive(true);
+		pausePanel.SetActive(true);
+	}
+	
 
-		paused = !paused;
-
-		if (paused) {
-			Time.timeScale = 0;
-			pauseText.text = "Resume";
-			player.GetComponent<TouchMovement>().enabled = false;
-			backButton.SetActive(true);
-			pausePanel.SetActive(true);
-		}
-
-		else if (!paused) {
-			Time.timeScale = 1; // remember this freezes/unfreezes everything
-			pauseText.text = "Pause";
-			player.GetComponent<TouchMovement>().enabled = true;
-			backButton.SetActive(false);
-			pausePanel.SetActive(false);
-		}
+	public void Resume () {
+		paused = false;
+		Time.timeScale = 1; // remember this freezes/unfreezes everything
+		player.GetComponent<TouchMovement>().enabled = true;
+		backButton.SetActive(false);
+		resumeButton.SetActive(false);
+		pausePanel.SetActive(false);
 	}
 
 	IEnumerator explode(){
