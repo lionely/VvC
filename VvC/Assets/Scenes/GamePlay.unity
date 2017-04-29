@@ -162,8 +162,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -148, y: -75}
-  m_SizeDelta: {x: 296, y: 200}
+  m_AnchoredPosition: {x: -155.99997, y: -75}
+  m_SizeDelta: {x: 312, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &133590669
 GameObject:
@@ -401,11 +401,11 @@ MonoBehaviour:
   mushroom:
   - {fileID: 1827622847532794, guid: 1d3b84e994efa47cfb63046d84ad30c6, type: 2}
   decorationMeat:
-  - {fileID: 1815173895466292, guid: 62dfa3a7d75454f52a1474b42d0680f1, type: 2}
+  - {fileID: 1551588081742852, guid: de878832241f541429e0861beb0db851, type: 2}
   - {fileID: 1947926533030594, guid: 88ef620a2d1054b8b9bd26c4e79d8891, type: 2}
   - {fileID: 1920664658414488, guid: 963a5e6cbbc32437ab0c23eda44a0f76, type: 2}
   decorationVeggie:
-  - {fileID: 1224329144450378, guid: f5d8643dfa154441288cb9bd7eb7af1b, type: 2}
+  - {fileID: 1007197148507496, guid: 9c256440456bf4db7902b6b5637c71fe, type: 2}
   - {fileID: 1224329144450378, guid: f5d8643dfa154441288cb9bd7eb7af1b, type: 2}
   - {fileID: 1494298972883422, guid: 41d62f3a30a0b450191dbd6fa7504ddb, type: 2}
 --- !u!4 &178350552
@@ -575,9 +575,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -421, y: -75}
-  m_SizeDelta: {x: 178, y: 200}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -439.15, y: -75}
+  m_SizeDelta: {x: 186, y: 200}
+  m_Pivot: {x: 0.434671, y: 0.5}
 --- !u!114 &378224752
 MonoBehaviour:
   m_ObjectHideFlags: 0
