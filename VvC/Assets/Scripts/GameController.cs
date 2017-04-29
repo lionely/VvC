@@ -20,8 +20,8 @@ public class GameController : MonoBehaviour {
 	public GameObject pausePanel;
 	public GameObject deathExplosion;
 
-	public AudioClip[] goodSound = new AudioClip[3];
-	public AudioClip[] badSound = new AudioClip[3];
+	public AudioClip[] goodSound = new AudioClip[3];// Sound made when right food is eaten.
+	public AudioClip[] badSound = new AudioClip[3];// Sound made when wrong food is eaten.
 	public AudioSource audio;
 
 	public static int score;
@@ -104,12 +104,11 @@ public class GameController : MonoBehaviour {
 
 	public void GainPointEffects () {
 		audio.clip = goodSound [Random.Range (0, goodSound.Length)];
-		//print (audio.clip.name);
+
 		audio.pitch = Random.Range (0.8f, 1.2f);
-		//print (audio.pitch);
+
 		audio.Play ();
-		//source.pitch = Random.Range (0.8f, 1.2f);
-		//source.Play ();
+
 
 		// Good Particles
 		particle.GoodParticles();
@@ -153,8 +152,9 @@ public class GameController : MonoBehaviour {
 		yield return new WaitForSeconds (1.0f);
 
 		player.GetComponent<TouchMovement>().enabled = false;
-		//Destroy(player.gameObject);	
-		player.gameObject.SetActive(false);// works a bit better because we don't get the error of not referencing 
+
+		player.gameObject.SetActive(false);// works a bit better than destroying player
+		//because we don't get the error of not referencing 
 		//something that is not there.
 		Instantiate (deathExplosion, new Vector3(rb.position.x, rb.position.y, 0), Quaternion.Euler(0, 0, 0));
 		Invoke("LoadGameOver", 2);
