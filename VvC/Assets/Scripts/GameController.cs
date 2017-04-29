@@ -14,9 +14,9 @@ public class GameController : MonoBehaviour {
 
 	public Text scoreText;
 	public Text lifeText;
-	public Text pauseText;
 
 	public GameObject backButton;
+	public GameObject resumeButton;
 	public GameObject pausePanel;
 	public GameObject deathExplosion;
 
@@ -42,6 +42,7 @@ public class GameController : MonoBehaviour {
 		rb = player.GetComponent<Rigidbody2D> ();
 		backButton.SetActive(false);
 		pausePanel.SetActive(false);
+		resumeButton.SetActive(false);
 		paused = false;
 		died = false;
 		score = 0;
@@ -128,24 +129,21 @@ public class GameController : MonoBehaviour {
 	}
 
 	public void Pause () {
-
-		paused = !paused;
-
-		if (paused) {
-			Time.timeScale = 0;
-			pauseText.text = "Resume";
-			player.GetComponent<TouchMovement>().enabled = false;
-			backButton.SetActive(true);
-			pausePanel.SetActive(true);
-		}
-
-		else if (!paused) {
-			Time.timeScale = 1; // remember this freezes/unfreezes everything
-			pauseText.text = "Pause";
-			player.GetComponent<TouchMovement>().enabled = true;
-			backButton.SetActive(false);
-			pausePanel.SetActive(false);
-		}
+		paused = true;
+		Time.timeScale = 0;
+		player.GetComponent<TouchMovement> ().enabled = false;
+		backButton.SetActive (true);
+		resumeButton.SetActive (true);
+		pausePanel.SetActive (true);
+	}
+	
+	public void Resume () {
+		paused = false;
+		Time.timeScale = 1; // remember this freezes/unfreezes everything
+		player.GetComponent<TouchMovement>().enabled = true;
+		backButton.SetActive(false);
+		resumeButton.SetActive(false);
+		pausePanel.SetActive(false);
 	}
 
 	IEnumerator explode(){
