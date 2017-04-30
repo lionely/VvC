@@ -9,7 +9,6 @@ public class Decoration : MonoBehaviour {
 	private float RIGHTLANE_X = 4.75f;
 	private Rigidbody2D rigi;
 	private GameController gc;
-	private float downward_speed;
 	public float[] decorationPosX;
 	private int index;
 
@@ -39,5 +38,8 @@ public class Decoration : MonoBehaviour {
 	void Update () {
 		// Set the speed of this decoration to the speed of the scene
 		rigi.velocity = new Vector2 (0.0f, gc.speed);
+		Debug.Log (rigi.velocity);
+		Debug.Log (gc.speed);
+
 	}
 }

@@ -13,7 +13,6 @@ public class Obstacle : MonoBehaviour {
 	private float RIGHTLANE_X = 2.5f;
 	private Rigidbody2D rigi;
 	private GameController gc;
-	private float downward_speed;
 	public float[] foodPosX;
 	private int index;
 
