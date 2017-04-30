@@ -12,6 +12,8 @@ public class GameOver : MonoBehaviour {
 	int score;
 	public static int highScore; 
 
+	public GameObject levelLoader;
+
 	void Awake()
 	{	score = GameController.score;
 		ScoreText = GameObject.Find("Score").GetComponent<Text>(); //UI Text Object
@@ -27,7 +29,8 @@ public class GameOver : MonoBehaviour {
 	}
 
 	public void BackToMenu(){
-		SceneManager.LoadScene ("MainMenu",LoadSceneMode.Single);//loads scenes
+		Instantiate (levelLoader, levelLoader.transform.position, levelLoader.transform.rotation);
+		Loading.levelToLoad = "MainMenu";
 	}
 
 	/*
