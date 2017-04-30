@@ -6,7 +6,7 @@ public class Generate : MonoBehaviour {
 
 	Player player;
 	public GameObject[] veggie = new GameObject[3]; //Veggie types
-	public GameObject[] meat = new GameObject[3];
+	public GameObject[] meat = new GameObject[3]; // meat types
 	public GameObject[] mushroom = new GameObject[1];
 
 	public GameObject[] decorationMeat = new GameObject[3];
@@ -16,7 +16,7 @@ public class Generate : MonoBehaviour {
 
 	private int obstacleIndex;	//Number corresponds to a obstacle type
 	private int decorationIndex;
-	private int chanceVM; // if 0 make meat, else veggie
+	private int chanceVM; // chance of an object being a veggie,meat or mushroom.
 	private int foodInARow = 0; //Keeps track of multiple types of food spawning in a row
 	private int lastLane = 0; //Keeps track of the last lane food was spawned in
 

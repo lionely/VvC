@@ -9,9 +9,7 @@ public class Player : MonoBehaviour {
 	public GameObject veganBackground;
 	public GameObject meatBackground;
 
-	public GameObject fader;
-
-	public static bool Vegan;
+	public static bool Vegan; // Type of player
 
 	// Use this for initialization
 	void Start () 
@@ -20,11 +18,6 @@ public class Player : MonoBehaviour {
 		setVegan (); //Sets Initial Mode
 			}
 	
-	// Update is called once per frame
-	void Update () {
-
-	}
-
 	// Sets Initial  bg, and player animation.
 	void setVegan(){
 		if (Vegan) {
@@ -91,23 +84,5 @@ public class Player : MonoBehaviour {
 			yield return new WaitForSeconds (1.0f / (f + 5.0f));
 		}
 	}
-
-	private void clearObstacle()
-	{
-		Instantiate(fader, fader.transform.position, fader.transform.rotation);
-
-		//Bug not all items clear , not sure why at the moment.
-		GameObject[] meatArray = GameObject.FindGameObjectsWithTag ("Meat"); 
-		GameObject[] vegArray  = GameObject.FindGameObjectsWithTag("Veggie");
-		GameObject[] mushArray = GameObject.FindGameObjectsWithTag("Mushroom");
-
-		foreach(GameObject go in meatArray)
-			Destroy(go);
-		foreach (GameObject go in vegArray)
-			Destroy (go);
-		foreach (GameObject go in mushArray)
-			Destroy (go);
-	}
-
 
 }

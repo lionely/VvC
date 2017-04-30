@@ -14,14 +14,14 @@ public class GameController : MonoBehaviour {
 
 	public Text scoreText;
 	public Text lifeText;
-	public Text pauseText;
 
 	public GameObject backButton;
+	public GameObject resumeButton;
 	public GameObject pausePanel;
 	public GameObject deathExplosion;
 
-	public AudioClip[] goodSound = new AudioClip[3];
-	public AudioClip[] badSound = new AudioClip[3];
+	public AudioClip[] goodSound = new AudioClip[3];// Sound made when right food is eaten.
+	public AudioClip[] badSound = new AudioClip[3];// Sound made when wrong food is eaten.
 	public AudioSource audio;
 
 	public static int score;
@@ -41,6 +41,7 @@ public class GameController : MonoBehaviour {
 		player = player = GameObject.Find("Player").GetComponent<Player> ();
 		rb = player.GetComponent<Rigidbody2D> ();
 		backButton.SetActive(false);
+		resumeButton.SetActive(false);
 		pausePanel.SetActive(false);
 		paused = false;
 		died = false;
@@ -67,7 +68,7 @@ public class GameController : MonoBehaviour {
 	public void AddScore () {
 		score += 1;
 		scoreSinceHit += 1;
-		scoreText.text = "Score: " + score;
+		scoreText.text = "SCORE: " + score;
 
 		// Juice Effects
 		GainPointEffects();
@@ -75,7 +76,7 @@ public class GameController : MonoBehaviour {
 
 	public void LoseLife () {
 		life -= 1;
-		lifeText.text = "Life: " + life;
+		lifeText.text = "LIFE: " + life;
 		scoreSinceHit = (int) Mathf.Floor(scoreSinceHit*0.9f);
 
 		// Juice Effects
@@ -104,12 +105,11 @@ public class GameController : MonoBehaviour {
 
 	public void GainPointEffects () {
 		audio.clip = goodSound [Random.Range (0, goodSound.Length)];
-		//print (audio.clip.name);
+
 		audio.pitch = Random.Range (0.8f, 1.2f);
-		//print (audio.pitch);
+
 		audio.Play ();
-		//source.pitch = Random.Range (0.8f, 1.2f);
-		//source.Play ();
+
 
 		// Good Particles
 		particle.GoodParticles();
@@ -129,32 +129,31 @@ public class GameController : MonoBehaviour {
 	}
 
 	public void Pause () {
+		paused = true;
+		Time.timeScale = 0;
+		player.GetComponent<TouchMovement>().enabled = false;
+		backButton.SetActive(true);
+		resumeButton.SetActive(true);
+		pausePanel.SetActive(true);
+	}
+	
 
-		paused = !paused;
-
-		if (paused) {
-			Time.timeScale = 0;
-			pauseText.text = "Resume";
-			player.GetComponent<TouchMovement>().enabled = false;
-			backButton.SetActive(true);
-			pausePanel.SetActive(true);
-		}
-
-		else if (!paused) {
-			Time.timeScale = 1; // remember this freezes/unfreezes everything
-			pauseText.text = "Pause";
-			player.GetComponent<TouchMovement>().enabled = true;
-			backButton.SetActive(false);
-			pausePanel.SetActive(false);
-		}
+	public void Resume () {
+		paused = false;
+		Time.timeScale = 1; // remember this freezes/unfreezes everything
+		player.GetComponent<TouchMovement>().enabled = true;
+		backButton.SetActive(false);
+		resumeButton.SetActive(false);
+		pausePanel.SetActive(false);
 	}
 
 	IEnumerator explode(){
 		yield return new WaitForSeconds (1.0f);
 
 		player.GetComponent<TouchMovement>().enabled = false;
-		//Destroy(player.gameObject);	
-		player.gameObject.SetActive(false);// works a bit better because we don't get the error of not referencing 
+
+		player.gameObject.SetActive(false);// works a bit better than destroying player
+		//because we don't get the error of not referencing 
 		//something that is not there.
 		Instantiate (deathExplosion, new Vector3(rb.position.x, rb.position.y, 0), Quaternion.Euler(0, 0, 0));
 		Invoke("LoadGameOver", 2);

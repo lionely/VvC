@@ -39,10 +39,10 @@ public class HighScore : MonoBehaviour {
 	private void setHighScore()
 	{
 		if (!GameOver.highScore.Equals (null)) {
-			highScoreText.text = "Best Score:" + " " + PlayerPrefs.GetInt ("HighScore");
+			highScoreText.text = "BEST SCORE:" + " " + PlayerPrefs.GetInt ("HighScore");
 		} else 
 		{
-			highScoreText.text = "Best Score:" + " " + '0';
+			highScoreText.text = "BEST SCORE:" + " " + '0';
 		}
 	}
 
