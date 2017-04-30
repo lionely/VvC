@@ -18,6 +18,7 @@ public class Generate : MonoBehaviour {
 	private int decorationIndex;
 	private int chanceVM; // if 0 make meat, else veggie
 	private int foodInARow = 0; //Keeps track of multiple types of food spawning in a row
+	private int lastLane = 0; //Keeps track of the last lane food was spawned in
 
 	// Determines the relationship of GameController speed to Obstacle generation rate; higher = faster
 	private float OBSTACLE_GENERATION_CONSTANT = 0.006f;
@@ -32,13 +33,13 @@ public class Generate : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		gc = FindObjectOfType<GameController> ();
-		//player = GameObject.Find("Player").GetComponent<Player> ();
+		player = GameObject.Find("Player").GetComponent<Player> ();
 
 	}
 
 	// Update is called once per frame
 	void Update () {
-		chanceVM = Random.Range (0, 11); // 0-10 
+		chanceVM = Random.Range (0, 2); // 0-10 
 		obstacleIndex = Random.Range (0, 3); // 0-2
 		decorationIndex = Random.Range(0, 3); // 0-2
 
@@ -63,41 +64,61 @@ public class Generate : MonoBehaviour {
 
 
 	void CreateObstacle(){
-		// 45.5% Veggie
-		if (chanceVM >= 0 && chanceVM <= 4) {
-			//Checks if two veggies have been spawned in a row to avoid impossible situations.
-			if (foodInARow == -2) {
-				Instantiate (meat [obstacleIndex]);
-				foodInARow = 1;
-			} else {
-				Instantiate (veggie [obstacleIndex]);
-				if (foodInARow > 0) {
-					foodInARow = -1;
-				}
-				else{
-					foodInARow -= 1;
-				}
-			}
-			// 45.5% Meat
-		}  else if (chanceVM >= 5 && chanceVM <= 9) {
-			//Checks if two meat have been spawned in a row to avoid impossible situations.
-			if (foodInARow == 2) {
-				Instantiate (veggie [obstacleIndex]);
-				foodInARow = -1;
-			} else {
-				Instantiate (meat [obstacleIndex]);
-				if (foodInARow < 0) {
-					foodInARow = 1;
-				}
-				else{
-					foodInARow += 1;
-				}
-			}
-			// 9% Mushroom
-		}  else {
-			Instantiate(mushroom[0]);
-			foodInARow = 0;
+		
+		if (!checkIfSpawnMushroom ()) {
+			if (chanceVM == 0) {
+				//Checks if two veggies have been spawned in a row to avoid impossible situations.
+				spawnVegetable();
+				// 45.5% Meat
+			}  else if (chanceVM == 1) {
+				//Checks if two meat have been spawned in a row to avoid impossible situations.
+				spawnMeat();
+				// 9% Mushroom
+			}  
+		}
+	}
 
+	bool checkIfSpawnMushroom(){
+		if (player.veganBackground.activeSelf && foodInARow == 2) {
+			Instantiate (mushroom [0]);
+			foodInARow = 0;
+			return true;
+		}
+		else if (player.meatBackground.activeSelf && foodInARow == -2) {
+			Instantiate (mushroom [0]);
+			foodInARow = 0;
+			return true;
+		}
+		return false;
+	}
+
+	void spawnVegetable(){
+		if (foodInARow == -2) {
+			Instantiate (meat [obstacleIndex]);
+			foodInARow = 1;
+		} else {
+			Instantiate (veggie [obstacleIndex]);
+			if (foodInARow > 0) {
+				foodInARow = -1;
+			}
+			else{
+				foodInARow -= 1;
+			}
+		}
+	}
+
+	void spawnMeat(){
+		if (foodInARow == 2) {
+			Instantiate (veggie [obstacleIndex]);
+			foodInARow = -1;
+		} else {
+			Instantiate (meat [obstacleIndex]);
+			if (foodInARow < 0) {
+				foodInARow = 1;
+			}
+			else{
+				foodInARow += 1;
+			}
 		}
 	}
 

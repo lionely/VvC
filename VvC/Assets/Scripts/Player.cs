@@ -57,7 +57,6 @@ public class Player : MonoBehaviour {
 				Destroy(col.gameObject,.1f);
 				StartCoroutine(mushroom ());
 				gameController.mushroomFreeze ();
-//				Vegan = !Vegan;
 				animator.SetTrigger ("toCarnivore");
 			}
 		}
@@ -76,37 +75,19 @@ public class Player : MonoBehaviour {
 				Destroy(col.gameObject,.1f);
 				StartCoroutine(mushroom ());
 				gameController.mushroomFreeze();
-//				Vegan = !Vegan;
 				animator.SetTrigger ("toVegan");
 			}
 		}
 	}
-
-	public void DestroyPlayer() {
-		Destroy(this.gameObject);
-	}
-
-	public void switchBackground(){
 		
-		if (veganBackground.activeSelf) {
-			meatBackground.SetActive (true);
-			veganBackground.SetActive (false);
-			Vegan = !Vegan;
-		} else {
-			veganBackground.SetActive (true);
-			meatBackground.SetActive (false);
-			Vegan = !Vegan;
-			}
-	}
-
 	IEnumerator mushroom(){
+		Vegan = !Vegan;
 		for (float f = 1; f <= 7; f++) {
-			Invoke ("switchBackground", 1.0f / (f + 5.0f));
-			if (Vegan) {
+			meatBackground.SetActive (!meatBackground.activeSelf);
+			veganBackground.SetActive (!veganBackground.activeSelf);
+			if (meatBackground.activeSelf) {
 				animator.SetTrigger ("toCarnivore");
-			} else {
-				animator.SetTrigger ("toVegan");
-			}
+			} else {animator.SetTrigger ("toVegan");}
 			yield return new WaitForSeconds (1.0f / (f + 5.0f));
 		}
 	}
