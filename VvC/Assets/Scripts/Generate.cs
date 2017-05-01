@@ -39,7 +39,7 @@ public class Generate : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		chanceVM = Random.Range (0, 2); // 0-10 
+		chanceVM = Random.Range (0, 2); // 0-1 
 		obstacleIndex = Random.Range (0, 3); // 0-2
 		decorationIndex = Random.Range(0, 3); // 0-2
 
@@ -69,11 +69,9 @@ public class Generate : MonoBehaviour {
 			if (chanceVM == 0) {
 				//Checks if two veggies have been spawned in a row to avoid impossible situations.
 				spawnVegetable();
-				// 45.5% Meat
 			}  else if (chanceVM == 1) {
 				//Checks if two meat have been spawned in a row to avoid impossible situations.
 				spawnMeat();
-				// 9% Mushroom
 			}  
 		}
 	}

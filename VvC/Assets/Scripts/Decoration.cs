@@ -38,8 +38,5 @@ public class Decoration : MonoBehaviour {
 	void Update () {
 		// Set the speed of this decoration to the speed of the scene
 		rigi.velocity = new Vector2 (0.0f, gc.speed);
-		Debug.Log (rigi.velocity);
-		Debug.Log (gc.speed);
-
 	}
 }
