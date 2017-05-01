@@ -13,7 +13,5 @@ public class TitleScreenFood : MonoBehaviour {
 		spawnPosition = Random.Range (-2, 3);
 		transform.position = new Vector2 ((float) spawnPosition, 7.0f);
 		rigi.velocity = new Vector2 (0.0f, -2.0f);
-
 	}
-
 }
