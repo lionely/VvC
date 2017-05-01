@@ -527,7 +527,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -422, y: -75}
+  m_AnchoredPosition: {x: -422, y: -66}
   m_SizeDelta: {x: 176, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &378224752
@@ -551,18 +551,18 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 404de05c5410944a893e54950fe7c5a7, type: 3}
-    m_FontSize: 35
+    m_FontSize: 32
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 60
+    m_MaxSize: 300
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: "LIFE: \n 3"
+    m_LineSpacing: 0.7
+  m_Text: 'LIFE: 3'
 --- !u!222 &378224753
 CanvasRenderer:
   m_ObjectHideFlags: 0
