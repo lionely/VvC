@@ -30,6 +30,7 @@ public class GameController : MonoBehaviour {
 
 	public bool paused;
 	private bool died;
+	private bool gameOver;
 
 	public float speed;
 
@@ -45,6 +46,7 @@ public class GameController : MonoBehaviour {
 		pausePanel.SetActive(false);
 		paused = false;
 		died = false;
+		gameOver = false;
 		score = 0;
 		life = 3;
 		speed = BASE_SPEED;
@@ -61,7 +63,10 @@ public class GameController : MonoBehaviour {
 		if (died) {
 			paused = true;
 			speed = 0;
-			StartCoroutine(explode());
+			if(gameOver == false){
+				StartCoroutine(explode());
+			}
+			gameOver = true;
 		}
 	}
 
