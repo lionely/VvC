@@ -1097,7 +1097,8 @@ MonoBehaviour:
   backButton: {fileID: 1208978956}
   resumeButton: {fileID: 654259179}
   pausePanel: {fileID: 967550369}
-  deathExplosion: {fileID: 139366, guid: b185c1a9cf067374586d095111b15bd1, type: 2}
+  deathExplosion: {fileID: 1875902325167448, guid: 73f5e1d6791f04ed1b69d52e7a20c4ba,
+    type: 2}
   goodSound:
   - {fileID: 8300000, guid: 8e9625806f7094671ab8c6bf115c3568, type: 3}
   - {fileID: 8300000, guid: c9e76be38c33b455ea24b2c489089eff, type: 3}
