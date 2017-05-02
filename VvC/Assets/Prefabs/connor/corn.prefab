@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 58527585879410306}
   - component: {fileID: 114935082537284696}
   m_Layer: 0
-  m_Name: Potato
+  m_Name: corn
   m_TagString: Veggie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
