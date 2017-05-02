@@ -658,7 +658,7 @@ Prefab:
     - target: {fileID: 61707263185260524, guid: 0dbddcd055de644399d79b63277e1de8,
         type: 2}
       propertyPath: m_Size.y
-      value: 0.26
+      value: 0.18
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 82206138101493366, guid: 0dbddcd055de644399d79b63277e1de8, type: 2}
