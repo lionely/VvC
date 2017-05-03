@@ -22,6 +22,7 @@ public class GameController : MonoBehaviour {
 
 	public AudioClip[] goodSound = new AudioClip[3];// Sound made when right food is eaten.
 	public AudioClip[] badSound = new AudioClip[3];// Sound made when wrong food is eaten.
+	public AudioClip boom = new AudioClip(); 
 	public AudioSource audio;
 
 	public static int score;
@@ -153,14 +154,20 @@ public class GameController : MonoBehaviour {
 	}
 
 	IEnumerator explode(){
+		audio.clip = boom;
+		audio.Play ();
 		yield return new WaitForSeconds (1.0f);
 
 		player.GetComponent<TouchMovement>().enabled = false;
+
 
 		player.gameObject.SetActive(false);// works a bit better than destroying player
 		//because we don't get the error of not referencing 
 		//something that is not there.
 		Instantiate (deathExplosion, new Vector3(rb.position.x, rb.position.y, 0), Quaternion.Euler(0, 0, 0));
+
+
+
 		Invoke("LoadGameOver", 2);
 	}
 
