@@ -41,7 +41,7 @@ public class GameOver : MonoBehaviour {
 		if (score > highScore) 
 		{
 			highScore = score;
-			PlayerPrefs.SetInt ("HIGHSCORE", highScore);
+			PlayerPrefs.SetInt ("HighScore", highScore);
 		}
 
 		ScoreText.text = "BEST:" + " "  + highScore + '\n' + " " + '\n'
