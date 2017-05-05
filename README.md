@@ -1,6 +1,6 @@
 # VvC
 
-##List of known bugs:
+# List of known bugs:
 
 *The score can only be displayed up to 999. But we also assumed that players would not be able to reach 4 digits.*
 
