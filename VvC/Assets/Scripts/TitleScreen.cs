@@ -12,8 +12,11 @@ public class TitleScreen : MonoBehaviour {
 
 	void Awake()
 	{
+		//PlayerPrefs.SetString ("Loaded",null);
+		
 		if (PlayerPrefs.GetString ("Loaded").Equals (null)) 
 		{
+			print("was null");
 			PlayerPrefs.SetString ("Loaded", "true");
 		}
 
